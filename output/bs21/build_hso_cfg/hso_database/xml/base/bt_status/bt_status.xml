@@ -1,0 +1,59 @@
+<MSG_LOG><MSG STRUCTURE="bt_status_msg_id_100" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0100" />
+			<MSG STRUCTURE="bt_status_msg_id_101" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0101" />
+			<MSG STRUCTURE="bt_status_msg_id_102" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0102" />
+			<MSG STRUCTURE="bt_status_msg_id_103" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0103" />
+			<MSG STRUCTURE="bt_status_msg_id_104" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0104" />
+			<MSG STRUCTURE="bt_status_msg_id_106" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0106" />
+			<MSG STRUCTURE="bt_status_msg_id_107" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0107" />
+			<MSG STRUCTURE="bt_status_msg_id_10b" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f010b" />
+			<MSG STRUCTURE="bt_status_msg_id_10c" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f010c" />
+			<MSG STRUCTURE="bt_status_msg_id_10d" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f010d" />
+			<MSG STRUCTURE="bt_status_msg_id_10e" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f010e" />
+			<MSG STRUCTURE="bt_status_msg_id_180" NAME="%s;----&gt;%s; send sed_id=%d; HCI_COMMAND_COMPLETE,  %s" ID="0x1f0180" />
+			<MSG STRUCTURE="bt_status_msg_id_181" NAME="%s;----&gt;%s; send sed_id=%d; HCI_COMMAND_STATUS,  %s" ID="0x1f0181" />
+			<MSG STRUCTURE="bt_status_msg_id_182" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0182" />
+			<MSG STRUCTURE="bt_status_msg_id_183" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0183" />
+			<MSG STRUCTURE="bt_status_msg_id_184" NAME="%s;----&gt;%s; send sed_id=%d; LL_UNKNOWN_RSP,  %s" ID="0x1f0184" />
+			<MSG STRUCTURE="bt_status_msg_id_185" NAME="%s;----&gt;%s; send sed_id=%d; LL_REJECT_EXT_IND,  %s" ID="0x1f0185" />
+			<MSG STRUCTURE="bt_status_msg_id_186" NAME="%s;----&gt;%s; send sed_id=%d; HCI_GLE_COMMAND_COMPLETE,  %s" ID="0x1f0186" />
+			<MSG STRUCTURE="bt_status_msg_id_187" NAME="%s;----&gt;%s; send sed_id=%d; HCI_GLE_COMMAND_STATUS,  %s" ID="0x1f0187" />
+			<MSG STRUCTURE="bt_status_msg_id_188" NAME="%s;----&gt;%s; send sed_id=%d; %s" ID="0x1f0188" />
+			<MSG STRUCTURE="bt_status_msg_id_189" NAME="%s;----&gt;%s; send sed_id=%d; GLE_LL_UNKNOWN_RSP,  %s" ID="0x1f0189" />
+			<MSG STRUCTURE="bt_status_msg_id_18a" NAME="%s;----&gt;%s; send sed_id=%d; GLE_LL_REJECT_IND,  %s" ID="0x1f018a" />
+			<MSG STRUCTURE="bt_status_msg_id_200" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0200" />
+			<MSG STRUCTURE="bt_status_msg_id_201" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0201" />
+			<MSG STRUCTURE="bt_status_msg_id_202" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0202" />
+			<MSG STRUCTURE="bt_status_msg_id_203" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0203" />
+			<MSG STRUCTURE="bt_status_msg_id_204" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0204" />
+			<MSG STRUCTURE="bt_status_msg_id_206" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0206" />
+			<MSG STRUCTURE="bt_status_msg_id_207" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f0207" />
+			<MSG STRUCTURE="bt_status_msg_id_20b" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f020b" />
+			<MSG STRUCTURE="bt_status_msg_id_20c" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f020c" />
+			<MSG STRUCTURE="bt_status_msg_id_20d" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f020d" />
+			<MSG STRUCTURE="bt_status_msg_id_20e" NAME="%s;----&gt;%s; forward sed_id=%d; %s" ID="0x1f020e" />
+			<MSG STRUCTURE="bt_status_msg_id_300" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0300" />
+			<MSG STRUCTURE="bt_status_msg_id_301" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0301" />
+			<MSG STRUCTURE="bt_status_msg_id_302" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0302" />
+			<MSG STRUCTURE="bt_status_msg_id_303" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0303" />
+			<MSG STRUCTURE="bt_status_msg_id_304" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0304" />
+			<MSG STRUCTURE="bt_status_msg_id_306" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0306" />
+			<MSG STRUCTURE="bt_status_msg_id_307" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f0307" />
+			<MSG STRUCTURE="bt_status_msg_id_30b" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f030b" />
+			<MSG STRUCTURE="bt_status_msg_id_30c" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f030c" />
+			<MSG STRUCTURE="bt_status_msg_id_30d" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f030d" />
+			<MSG STRUCTURE="bt_status_msg_id_30e" NAME="%s; sed_id=%d; SAVED HEAD %s; linenum=%d" ID="0x1f030e" />
+			<MSG STRUCTURE="bt_status_msg_id_400" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0400" />
+			<MSG STRUCTURE="bt_status_msg_id_401" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0401" />
+			<MSG STRUCTURE="bt_status_msg_id_402" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0402" />
+			<MSG STRUCTURE="bt_status_msg_id_403" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0403" />
+			<MSG STRUCTURE="bt_status_msg_id_404" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0404" />
+			<MSG STRUCTURE="bt_status_msg_id_406" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0406" />
+			<MSG STRUCTURE="bt_status_msg_id_407" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f0407" />
+			<MSG STRUCTURE="bt_status_msg_id_40b" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f040b" />
+			<MSG STRUCTURE="bt_status_msg_id_40c" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f040c" />
+			<MSG STRUCTURE="bt_status_msg_id_40d" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f040d" />
+			<MSG STRUCTURE="bt_status_msg_id_40e" NAME="%s; sed_id=%d; SAVED TAIL %s; linenum=%d" ID="0x1f040e" />
+			<MSG STRUCTURE="bt_status_msg_id_801" NAME="%s; sed_id=%d; RESTORE HEAD file=%s; linenum=%d" ID="0x1f0801" />
+			<MSG STRUCTURE="bt_status_msg_id_802" NAME="%s; sed_id=%d; RESTORE TAIL file=%s; linenum=%d" ID="0x1f0802" />
+			<MSG STRUCTURE="bt_status_msg_id_810" NAME="%s; sed_id=%d; TRANS_STATE=%s; linenum=%d" ID="0x1f0810" />
+			</MSG_LOG>

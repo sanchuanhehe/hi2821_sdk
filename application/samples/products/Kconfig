@@ -1,0 +1,302 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config ENABLE_PRODUCTS_SAMPLE
+    bool
+    prompt "Enable the Sample of products."
+    default n
+    depends on SAMPLE_ENABLE
+    help
+        This option means enable the sample of products.
+
+config SAMPLE_SUPPORT_SLE_UART
+    bool
+    prompt "Support SLE UART sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE UART Sample.
+
+if SAMPLE_SUPPORT_SLE_UART
+menu "SLE UART Sample Configuration"
+    osource "application/samples/products/sle_uart/Kconfig"
+endmenu
+endif
+
+
+config SAMPLE_SUPPORT_BLE_UART
+    bool
+    prompt "Support BLE UART sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support BLE UART Sample.
+
+if SAMPLE_SUPPORT_BLE_UART
+menu "BLE UART Sample Configuration"
+    osource "application/samples/products/ble_uart/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_SLE_GAMEPAD_WITH_DONGLE
+    bool
+    prompt "Support SLE GAMEPAD With Dongle sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE GAMEPAD Sample.
+
+if SAMPLE_SUPPORT_SLE_GAMEPAD_WITH_DONGLE
+menu "SLE GAMEPAD With Dongle Sample Configuration"
+    osource "application/samples/products/sle_gamepad_with_dongle/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_SLE_KEYBOARD_WITH_DONGLE
+    bool
+    prompt "Support SLE KEYBOARD With Dongle sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE KEYBOARD Sample.
+
+if SAMPLE_SUPPORT_SLE_KEYBOARD_WITH_DONGLE
+menu "SLE KeyBoard With Dongle Sample Configuration"
+    osource "application/samples/products/sle_keyboard_with_dongle/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_RCU
+    bool
+    prompt "Support RCU sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support RCU Sample.
+
+if SAMPLE_SUPPORT_RCU
+menu "rcu Sample Configuration"
+    osource "application/samples/products/rcu/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_USB_MOUSE
+    bool
+    prompt "Support USB mouse sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support USB mouse Sample.
+
+if SAMPLE_SUPPORT_USB_MOUSE
+menu "USB Mouse Sample Configuration"
+    osource "application/samples/product/usb_mouse/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_SLE_MOUSE_WITH_DONGLE
+    bool
+    prompt "Support SLE Mouse With Dongle sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE Mouse Sample.
+
+if SAMPLE_SUPPORT_SLE_MOUSE_WITH_DONGLE
+menu "SLE Mouse With Dongle Sample Configuration"
+    osource "application/samples/products/sle_mouse_with_dongle/Kconfig"
+endmenu
+endif
+
+
+config SAMPLE_SUPPORT_BLE_MOUSE
+    bool
+    prompt "Support BLE Mouse sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support BLE Mouse Sample.
+
+if SAMPLE_SUPPORT_BLE_MOUSE
+    osource "application/samples/products/ble_mouse/mouse_sensor/Kconfig"
+endif
+
+menu "Mouse Pin Configuration"
+visible if SAMPLE_SUPPORT_BLE_MOUSE || SAMPLE_SUPPORT_USB_MOUSE || SAMPLE_SUPPORT_SLE_MOUSE_WITH_DONGLE
+depends on ENABLE_PRODUCTS_SAMPLE
+config MOUSE_PIN_LEFT
+    int
+    prompt "Mouse left key pinnum."
+    default 0
+config MOUSE_PIN_MID
+    int
+    prompt "Mouse middle key pinnum."
+    default 1
+config MOUSE_PIN_RIGHT
+    int
+    prompt "Mouse right key pinnum."
+    default 2
+config MOUSE_PIN_QDEC_A
+    int
+    prompt "Mouse qdec a pinnum."
+    default 3
+config MOUSE_PIN_QDEC_B
+    int
+    prompt "Mouse qdec b pinnum."
+    default 4
+config MOUSE_PIN_QDEC_COMMON
+    int
+    prompt "Mouse qdec common pinnum."
+    default 5
+config MOUSE_PIN_NRESET
+    int
+    prompt "Mouse sensor reset pinnum."
+    default 21
+config MOUSE_PIN_MONTION
+    int
+    prompt "Mouse sensor montion pinnum."
+    default 6
+config MOUSE_PIN_SPI_CLK
+    int
+    prompt "Mouse SPI clk pinnum."
+    default 7
+config MOUSE_PIN_SPI_CS
+    int
+    prompt "Mouse SPI cs pinnum."
+    default 8
+config MOUSE_PIN_SPI_MOSI
+    int
+    prompt "Mouse SPI MOSI pinnum."
+    default 9
+config MOUSE_PIN_SPI_MISO
+    int
+    prompt "Mouse SPI MISO pinnum."
+    default 10
+config MOUSE_ADC_VBAT_CH
+    int
+    prompt "Mouse VBAT measurement channel."
+    default 7
+config MOUSE_ADC_VBAT_PIN
+    int
+    prompt "Mouse VBAT measurement pin."
+    default 2  if MOUSE_ADC_VBAT_CH = 0
+    default 3  if MOUSE_ADC_VBAT_CH = 1
+    default 4  if MOUSE_ADC_VBAT_CH = 2
+    default 5  if MOUSE_ADC_VBAT_CH = 3
+    default 28 if MOUSE_ADC_VBAT_CH = 4
+    default 29 if MOUSE_ADC_VBAT_CH = 5
+    default 30 if MOUSE_ADC_VBAT_CH = 6
+    default 31 if MOUSE_ADC_VBAT_CH = 7
+endmenu
+
+config SAMPLE_SUPPORT_BLE_KEYBOARD
+    bool
+    prompt "Support BLE Keyboard sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support BLE Keyboard Sample.
+
+config SAMPLE_SUPPORT_BLE_KEYBOARD_SIMULATOR
+    bool
+    prompt "Support BLE Keyboard sample simulator."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support BLE Keyboard Sample.
+
+config SAMPLE_SUPPORT_USB_VDT
+    bool
+    prompt "Support USB Voice Data Transmission sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support USB Voice Data Transmission Sample.
+
+if SAMPLE_SUPPORT_USB_VDT
+menu "USB Voice Data Transmission Sample Configuration"
+    osource "application/samples/products/usb_voice_data_transmission/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_SLE_VDT_WITH_DONGLE
+    bool
+    prompt "Support SLE Voice Data Transmission With Dongle sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE Voice Data Transmission With Dongle Sample.
+
+if SAMPLE_SUPPORT_SLE_VDT_WITH_DONGLE
+menu "SLE Voice Data Transmission With Dongle Sample Configuration"
+    osource "application/samples/products/sle_voice_data_trans_with_dongle/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_USB_KEYBOARD
+    bool
+    prompt "Support USB keyboard sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support Keyboard Sample.
+
+config SAMPLE_SUPPORT_USB_GAMEPAD
+    bool
+    prompt "Support USB gamepad sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support Gamepad Sample.
+
+config SAMPLE_SUPPORT_USB_MICOPHONE
+    bool
+    prompt "Support USB micophone sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    select I2S_SUPPORT_DMA
+    help
+        This option means support micpphone Sample.
+
+if SAMPLE_SUPPORT_USB_MICOPHONE
+menu "MICPHONE USB Sample Configuration"
+    osource "application/samples/products/usb_micophone/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_SLE_MICROPHONE
+    bool
+    prompt "Support SLE Microphone sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE Microphone Sample.
+
+if SAMPLE_SUPPORT_SLE_MICROPHONE
+menu "SLE Microphone sample Configuration"
+    osource "application/samples/products/sle_microphone/Kconfig"
+endmenu
+endif
+
+config SAMPLE_SUPPORT_BLE_SLE_TAG
+    bool
+    prompt "Support Ble Sle tag sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support SLE Mouse Sample.
+
+config SAMPLE_SUPPORT_AIR_MOUSE_WITH_DONGLE
+    bool
+    prompt "Support air mouse sample."
+    default n
+    depends on ENABLE_PRODUCTS_SAMPLE
+    help
+        This option means support Air Mouse Sample.
+
+if SAMPLE_SUPPORT_AIR_MOUSE_WITH_DONGLE
+menu "Air Mouse sample Configuration"
+    osource "application/samples/products/air_mouse/Kconfig"
+endmenu
+endif

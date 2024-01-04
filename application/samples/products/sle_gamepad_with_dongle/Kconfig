@@ -1,0 +1,12 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+choice
+    prompt "Select sle gamepad type"
+    default SAMPLE_SUPPORT_SLE_GAMEPAD
+    config SAMPLE_SUPPORT_SLE_GAMEPAD
+        bool "Enable SLE GAMEPAD sample."
+    config SAMPLE_SUPPORT_SLE_GAMEPAD_DONGLE
+        bool "Enable SLE GAMEPAD Dongle sample."
+endchoice

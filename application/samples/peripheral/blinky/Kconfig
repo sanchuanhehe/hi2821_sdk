@@ -1,0 +1,18 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+choice Based
+    prompt "Select CMSIS/OSAL Based."
+config BLINKY_BASED_CMSIS
+    bool "CMSIS Based"
+
+config BLINKY_BASED_OSAL
+    bool "OSAL Based"
+endchoice
+
+
+config BLINKY_DURATION_MS
+    int
+    prompt "Duration of blinky in MS."
+    default 500

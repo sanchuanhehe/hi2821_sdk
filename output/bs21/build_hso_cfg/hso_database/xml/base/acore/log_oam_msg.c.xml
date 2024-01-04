@@ -1,0 +1,5 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Start DFT with hook_type=%d @log_oam_msg.c(269),INFO" ID="0xa008086d" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[OML]recv oml msg type:%d, length:%d @log_oam_msg.c(515),INFO" ID="0xa008101d" />
+			<MSG STRUCTURE="diag_log_msg0" NAME="receive hci message succ! @log_oam_msg.c(544),INFO" ID="0xa0081105" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="[OML]recv hci msg length:%d @log_oam_msg.c(547),INFO" ID="0xa008111d" />
+			</MSG_LOG>

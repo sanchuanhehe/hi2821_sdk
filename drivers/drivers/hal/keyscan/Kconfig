@@ -1,0 +1,27 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2022-2022. All rights reserved.
+#===============================================================================
+config KEYSCAN_ENABLE_ALL_CLO
+    int
+    prompt "number of columns to start"
+    default 8
+    depends on DRIVER_SUPPORT_KEYSCAN
+
+config KEYSCAN_ENABLE_ALL_ROW
+    int
+    prompt "number of rows to start"
+    default 16
+    depends on DRIVER_SUPPORT_KEYSCAN
+
+config KEYSCAN_USE_LP
+    bool
+    prompt "KEYSCAN v150 uses key_int_lp register when it's going to sleep mode"
+    default y
+    depends on KEYSCAN_SUPPORT_SLEEP
+
+config KEYSCAN_USE_FULL_KEYS_TYPE
+    bool
+    prompt "KEYSCAN use full keys type"
+    default y
+    depends on DRIVER_SUPPORT_KEYSCAN

@@ -1,0 +1,21 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+config SLE_UART_BUS
+    int
+    prompt "Set the UART BUS of the currrent sample."
+    default 0
+    depends on SAMPLE_SUPPORT_SLE_UART
+    help
+        This option means the UART BUS of the currrent sample.
+
+choice
+    prompt "Select sle uart type"
+    default SAMPLE_SUPPORT_SLE_UART_SERVER
+    config SAMPLE_SUPPORT_SLE_UART_SERVER
+        bool "Enable SLE UART Server sample."
+    config SAMPLE_SUPPORT_SLE_UART_CLIENT
+        bool "Enable SLE UART Client sample."
+endchoice

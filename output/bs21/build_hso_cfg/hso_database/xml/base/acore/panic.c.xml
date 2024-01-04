@@ -1,0 +1,4 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:id:%d,code:0x%x,call:0x%x @panic.c(148),ERROR" ID="0xa00e04a2" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="==[system assert]:id:%d,code:0x%x,call:0x%x @panic.c(153),ERROR" ID="0xa00e04ca" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:normal core:%d,pc:0x%x,lr:0x%x @panic.c(167),ERROR" ID="0xa00e053a" />
+			</MSG_LOG>

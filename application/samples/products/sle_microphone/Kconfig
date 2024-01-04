@@ -1,0 +1,238 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config SLE_UAC_TRANSFER_LEN_OF_MICROPH
+    int
+    prompt "Set the length of transfer by UAC."
+    default 256
+    help
+        This option means the length of transfer by UAC.
+
+config SLE_MTU_LENGTH
+    int
+    prompt "Set the length of mtu."
+    default 490
+    help
+        This option means the length of mtu.
+
+config SLE_MULTICON_NUM
+    int
+    prompt "Set the num of sle multicon."
+    range 1 2
+    default 1
+    help
+        This option means the length of transfer by UAC.
+
+choice
+    prompt "Select SLE Microphone type"
+    default SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+    config SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        bool "Enable SLE Microphone Dongle sample."
+    config SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+        bool "Enable SLE Microphone Server sample."
+endchoice
+
+if SLE_MULTICON_NUM = 1
+    config SLE_MULTICON_SERVER1_ADDR0
+        hex
+        default 0x0A
+        prompt "Set the target sle server1 addr[0] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR1
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[1] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR2
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[2] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR3
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[3] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR4
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[4] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR5
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[5] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+endif
+if SLE_MULTICON_NUM = 2
+    config SLE_EXSIT_TWO_MULTICON_SERVER
+        int
+        default 1
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+    config SLE_MULTICON_SERVER1_ADDR0
+        hex
+        default 0x0A
+        prompt "Set the target sle server1 addr[0] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR1
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[1] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR2
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[2] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR3
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[3] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR4
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[4] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER1_ADDR5
+        hex
+        default 0x00
+        prompt "Set the target sle server1 addr[5] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+
+    config SLE_MULTICON_SERVER2_ADDR0
+        hex
+        default 0x0A
+        prompt "Set the target sle server2 addr[0] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER2_ADDR1
+        hex
+        default 0x00
+        prompt "Set the target sle server2 addr[1] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER2_ADDR2
+        hex
+        default 0x00
+        prompt "Set the target sle server2 addr[2] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER2_ADDR3
+        hex
+        default 0x00
+        prompt "Set the target sle server2 addr[3] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER2_ADDR4
+        hex
+        default 0x00
+        prompt "Set the target sle server2 addr[4] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+    config SLE_MULTICON_SERVER2_ADDR5
+        hex
+        default 0x01
+        prompt "Set the target sle server2 addr[5] of wanting to connect."
+        depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+        help
+            This option means the addr of tartget server wanting to connect.
+endif
+
+config SLE_MULTICON_SERVER_ADDR0
+    hex
+    default 0x0A
+    prompt "Set the sle server addr[0]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+config SLE_MULTICON_SERVER_ADDR1
+    hex
+    default 0x00
+    prompt "Set the sle server addr[1]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+config SLE_MULTICON_SERVER_ADDR2
+    hex
+    default 0x00
+    prompt "Set the sle server addr[2]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+config SLE_MULTICON_SERVER_ADDR3
+    hex
+    default 0x00
+    prompt "Set the sle server addr[3]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+config SLE_MULTICON_SERVER_ADDR4
+    hex
+    default 0x00
+    prompt "Set the sle server addr[4]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+config SLE_MULTICON_SERVER_ADDR5
+    hex
+    default 0x00
+    prompt "Set the sle server addr[5]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER
+
+config SLE_MULTICON_CLIENT_ADDR0
+    hex
+    default 0x0B
+    prompt "Set the sle client addr[0]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+config SLE_MULTICON_CLIENT_ADDR1
+    hex
+    default 0x00
+    prompt "Set the sle client addr[1]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+config SLE_MULTICON_CLIENT_ADDR2
+    hex
+    default 0x00
+    prompt "Set the sle client addr[2]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+config SLE_MULTICON_CLIENT_ADDR3
+    hex
+    default 0x00
+    prompt "Set the sle client addr[3]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+config SLE_MULTICON_CLIENT_ADDR4
+    hex
+    default 0x00
+    prompt "Set the sle client addr[4]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+config SLE_MULTICON_CLIENT_ADDR5
+    hex
+    default 0x00
+    prompt "Set the sle client addr[5]."
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_DONGLE
+
+config SLE_MULTICON_SERVER_NAME
+    string
+    prompt "set the name of sle server."
+    default "sle_micro_server1"
+    depends on SAMPLE_SUPPORT_SLE_MICROPHONE_SERVER

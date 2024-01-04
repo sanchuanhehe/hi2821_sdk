@@ -1,0 +1,21 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config ADC_SUPPORT_AMIC
+    bool
+    prompt "Whether ADC support AMIC."
+    default n
+    depends on DRIVER_SUPPORT_ADC
+
+config ADC_SUPPORT_HAFE
+    bool
+    prompt "Whether ADC support HAFE."
+    default y
+    depends on DRIVER_SUPPORT_ADC
+
+config AFE_SAMPLE_TIMES
+    int
+    prompt "The numbers ADC sample to average."
+    default 3
+    depends on DRIVER_SUPPORT_ADC

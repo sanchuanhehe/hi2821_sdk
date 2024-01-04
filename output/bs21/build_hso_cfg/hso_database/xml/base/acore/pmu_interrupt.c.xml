@@ -1,0 +1,2 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg4" NAME="[LOW_POWER], ana_status_0:0x%x, ana_status_1:0x%x, fnpll:0x%x, ulpfll:0x%x @pmu_interrupt.c(114),ERROR" ID="0xa0340392" />
+			</MSG_LOG>

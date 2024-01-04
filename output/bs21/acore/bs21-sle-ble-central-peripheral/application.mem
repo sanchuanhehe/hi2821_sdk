@@ -1,0 +1,1135 @@
+
+  Memory Usage Summary...
+  Section             Start Addr        Size      Used
+  ------------------  ----------  ----------  --------
+  
+  ITCM                0x00040000     0x14000   0x11E30 = 73264
+    .patch_data       0x00040000                  1040 load address 0x90115600
+    .rom_ram_bss      0x00040410                   280                  
+    .rom_ram_text     0x00040528                  3120 load address 0x90115A40
+    .rom_ram_data     0x00041158                   176 load address 0x90116670
+    .plat_rom_data    0x00041208                    48 load address 0x90116720
+    .bth_rom_data     0x00041238                    72 load address 0x90116750
+    .btc_rom_data     0x00041280                   792 load address 0x90116798
+    .plat_rom_bss     0x00041598                     0                  
+    .btc_rom_bss      0x00041598                     0                  
+    .bth_rom_bss      0x00041598                   880                  
+    .plt_ramtext      0x00041910                 39112 load address 0x90116AB0
+    .btc_ramtext      0x0004B1D8                  7168 load address 0x90120378
+    .usb_ramtext      0x0004CDD8                     0                  
+    .bss              0x0004CE00                 20528                  
+  
+  DTCM                0x20000000      0xF100    0x3500 = 13568
+    .stacks           0x20000000                  7168                  
+    .data             0x20001C00                  6400 load address 0x9017B9C8
+    .heap             0x20003500                     0                  
+  
+  PRESERVE            0x2000FF00       0x100      0xFC = 252
+    .preserve         0x2000FF00                   252                  
+  
+  FLASH_STARTUP       0x90115300       0x300     0x270 = 624
+    startup           0x90115300                   536                  
+    .version_str      0x90115518                    88                  
+  
+  FLASH_PROGRAM       0x90115600     0x68A00   0x67CC8 = 425160
+    .patch_data       0x90115600                  1040                  
+    .sysintcall.init  0x90115A10                    48                  
+    .rom_ram_text     0x90115A40                  3120                  
+    .rom_ram_data     0x90116670                   176                  
+    .plat_rom_data    0x90116720                    48                  
+    .bth_rom_data     0x90116750                    72                  
+    .btc_rom_data     0x90116798                   792                  
+    .plt_ramtext      0x90116AB0                 39112                  
+    .btc_ramtext      0x90120378                  7168                  
+    .initcall.init    0x90121F78                     8                  
+    .text             0x90121F80                367176                  
+    .data             0x9017B9C8                  6400                  
+  
+  CPUTRACE_RAM        0x52006000       0x3FC     0x3FC = 1020
+    .cputrace_mem     0x52006000                  1020                  
+
+  ====================================================
+
+
+  Memory Usage Details...
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .plt_ramtext                         19108
+
+    devcloud                             316
+      workspace                             
+        cc_source                           
+          open_source                       
+            cc_riscv32_musl_fp_win_build_src
+              gcc                           
+                libgcc                      
+                  libgcc2                          316
+
+    D:                                 18792
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                drivers                10512
+                  drivers               8678
+                    driver              4900
+                      sfc                736
+                        sfc                        736
+
+                      flash             2904
+                        flash                     2904
+
+                      spi                460
+                        spi                        460
+
+                      systick            366
+                        systick                    366
+
+                      tcxo               434
+                        tcxo                       434
+
+                    hal                 3778
+                      spi               2142
+                        v151            2042
+                          hal_spi_v151            1912
+                          hal_spi_v151_regs_op.h       106
+                          hal_spi_v151_regs_op        24
+
+                        hal_spi                    100
+
+                      sfc               1344
+                        hal_sfc_v150              1012
+                        hal_sfc                     68
+                        hal_sfc_v150_regs_op       236
+                        hal_sfc_v150_regs_op.h        28
+
+                      systick            126
+                        v150                
+                          hal_systick_v150          56
+                          hal_systick_v150_regs_op        70
+
+                      tcxo               166
+                        hal_tcxo_v150               96
+                        hal_tcxo_v150_regs_op        70
+
+                  chips                 1834
+                    bs2x                    
+                      clocks             592
+                        clocks_switch              592
+
+                      porting           1044
+                        flash            178
+                          flash_porting            178
+
+                        sfc              638
+                          flash_config_info        522
+                          sfc_porting              116
+
+                        spi              202
+                          spi_porting              202
+
+                        systick            8
+                          systick_porting            8
+
+                        tcxo              18
+                          tcxo_porting              18
+
+                      arch               108
+                        src                 
+                          interrupt                 16
+                          patch                     92
+
+                      interrupt           90
+                        interrupt_os_adapter        90
+
+                middleware              6482
+                  utils                 3840
+                    update              2496
+                      local_update          
+                        upg_patch                 2496
+
+                    pm                  1292
+                      pm_veto            276
+                        pm_veto                    276
+
+                      pm_sleep           510
+                        pm_sleep                   510
+
+                      pm_dev             206
+                        pm_dev                     206
+
+                      pm_fsm             300
+                        pm_fsm                     300
+
+                    dfx                   52
+                      diag                  
+                        diag_cmd_router     
+                          diag_cmd_dispatch         52
+
+                  chips                 2642
+                    bs2x                    
+                      pm                    
+                        pm_sleep        1164
+                          pm_sleep_porting        1164
+
+                        pm_porting                 910
+                        pm_dev            74
+                          pm_dev_porting            74
+
+                        pm_veto           28
+                          pm_veto_porting           28
+
+                        pm_sys           236
+                          pm_sys                   236
+
+                        ulp_rtc                    230
+
+                include                  840
+                  driver                    
+                    flash                   
+                      flash_config_info.h          840
+
+                kernel                   958
+                  non_os                 124
+                    non_os                  
+                      non_os_nmi                    98
+                      non_os_utils                  26
+
+                  osal                   834
+                    adapt                 54
+                      liteos                
+                        oal_onetrack                28
+                        osal_debug_adapt            26
+
+                    src                  780
+                      liteos                
+                        osal_event                  24
+                        osal_task                  194
+                        osal_interrupt             130
+                        osal_addr                   42
+                        osal_timer                  82
+                        osal_msgqueue               52
+                        osal_mutex                 128
+                        osal_debug                  34
+                        osal_semaphore              94
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .text                                70208
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                middleware             35691
+                  chips                 4872
+                    bs2x                4698
+                      pm                   4
+                        pm_sys              
+                          pm_sys                     4
+
+                      at                1992
+                        at_cmd_porting       550
+                          at_porting               550
+
+                        at_btc_cmd_table      1430
+                          at_btc_product          1418
+                          at_bt_cmd_table           12
+
+                        at_plt_cmd_table        12
+                          at_table                  12
+
+                      dfx               1800
+                        dfx_system_init            250
+                        last_dump_adapt             78
+                        diag_adapt_flash           220
+                        zdiag_adapt_sdt            818
+                        dfx_channel                184
+                        diag_adapt_cmd_mem         116
+                        sample_data_adapt          134
+
+                      exception          198
+                        exception_riscv            198
+
+                      update             704
+                        common              
+                          upg_common_porting       704
+
+                    bs21                 174
+                      nv                 156
+                        nv_porting          
+                          nv_flash                 156
+
+                      partition           18
+                        partition_porting           18
+
+                  utils                30819
+                    app_init              28
+                      app_init                      28
+
+                    at                  2872
+                      at                    
+                        src                 
+                          at_base                  184
+                          at_channel               466
+                          at_cmd                   244
+                          at_msg                    78
+                          at_parse                1592
+                          at_process               284
+                          at_report                 24
+
+                    nv                  7603
+                      nv_storage_lib      6509
+                        nv_update                 3335
+                        nv_key                    1478
+                        nv_nvregion                806
+                        nv_page                    386
+                        nv_store                   500
+                        nv_upg                       4
+
+                      nv_storage_app      1094
+                        soc_nv_storage_handle       888
+                        soc_nv_storage             206
+
+                    build_version          8
+                      private               
+                        build_version                8
+
+                    dfx                16740
+                      log_buffer        1386
+                        log_buffer_reader          690
+                        log_buffer                 582
+                        log_memory_region           76
+                        log_memory_section          38
+
+                      log               2296
+                        log_printf                 216
+                        log_oml_exception          540
+                        log_reg_dump                88
+                        log                        206
+                        log_oam_logger             556
+                        log_oml_ota_rom             80
+                        log_oam_status             170
+                        log_trigger                 26
+                        log_oam_mem_query          190
+                        log_oam_reg_query          224
+
+                      dfx_reboot          72
+                        cpu_utils         68
+                          private           
+                            cpu_utils               68
+
+                        reboot             4
+                          shared            
+                            non_os_reboot            4
+
+                      diag_dfx_cmd      2040
+                        last_dump        250
+                          last_dump                250
+
+                        diag_system_cmd      1278
+                          diag_cmd_beat_heart       114
+                          diag_cmd_filter          122
+                          diag_cmd_get_mem_info        34
+                          diag_cmd_get_task_info       100
+                          diag_cmd_connect         102
+                          diag_cmd_mem_read_write       672
+                          diag_cmd_password        134
+
+                        diag_sample_data       240
+                          diag_bt_sample_data       240
+
+                        diag_mocked_shell       272
+                          diag_mocked_shell        272
+
+                      dfx_os             220
+                        liteos_v1           
+                          dfx_mem                   60
+                          dfx_task                 160
+
+                      diag              4454
+                        diag_channel               162
+                        diag_rx_api                442
+                        diag_pkt                   200
+                        diag_msg                    30
+                        diag_mem                   256
+                        diag_pkt_router            972
+                        diag_tx                    314
+                        diag_cmd_router      1130
+                          diag_cmd_dst             192
+                          diag_ind_dst             112
+                          diag_ind_src             826
+
+                        romable           12
+                          diag_rom_api              12
+
+                        diag_service               590
+                        diag_dfx                     8
+                        diag_filter                338
+
+                      preserve           714
+                        private             
+                          preserve                 714
+
+                      diag_transmit      3910
+                        transmit_write_read         54
+                        transmit                   144
+                        transmit_dst               866
+                        transmit_send_recv_pkt.h        24
+                        transmit_item             1294
+                        transmit_send_recv_pkt       308
+                        transmit_src              1220
+
+                      log_reader         650
+                        private             
+                          log_uart                 490
+                          log_oam_msg              160
+
+                      log_file           632
+                        log_file_flash             250
+                        log_file                   382
+
+                      panic              366
+                        private             
+                          panic_rom                 48
+                          panic                    318
+
+                    algorithm           1736
+                      crc                   
+                        uapi_crc16                 552
+                        uapi_crc32                1184
+
+                    update              1558
+                      ota                586
+                        ota_upgrade                108
+                        ota_upgrade_handle         478
+
+                      common             582
+                        upg_common                 514
+                        upg_alloc                   68
+
+                      storage            318
+                        upg_storage                318
+
+                      local_update        72
+                        upg_process                 72
+
+                    mips                  36
+                      private               
+                        mips                        36
+
+                    partition            238
+                      partition                    238
+
+                test                    3882
+                  common                    
+                    testsuite               
+                      src                   
+                        test_auxiliary             434
+                        test_suite_channel          22
+                        test_suite_commands_processor       374
+                        test_suite_console        1988
+                        test_suite_functions_processor       398
+                        test_suite_log             124
+                        test_suite_task            270
+                        test_suite_uart            242
+                        test_suite                  30
+
+                application              966
+                  bs21                   964
+                    standard                
+                      app_os_init                  324
+                      main                         640
+
+                  demo                     2
+                    demo                             2
+
+                drivers                16499
+                  chips                 4162
+                    bs2x                3996
+                      clocks             544
+                        clock_calibration          244
+                        clocks                     184
+                        hal_32k_clock              116
+
+                      porting           1894
+                        pm              1024
+                          pm_clock       730
+                            pm_clock_porting       730
+
+                          pm_pmu         294
+                            pm_pmu_porting         294
+
+                        efuse             24
+                          efuse_porting             24
+
+                        gpio             110
+                          gpio_porting             110
+
+                        timer            370
+                          timer_porting            370
+
+                        uart             240
+                          uart_porting             240
+
+                        pmp               36
+                          pmp_porting               36
+
+                        watchdog          90
+                          watchdog_porting          90
+
+                      arch               158
+                        src                 
+                          oam_trace                158
+
+                      liteos             378
+                        tick_timer                 200
+                        idle_config                 30
+                        memory_info                148
+
+                      pmu               1022
+                        pmu_ldo                    410
+                        pmu_interrupt              544
+                        pmu                         68
+
+                    bs21                 166
+                      porting               
+                        pinctrl             
+                          pinctrl_porting_bs21       166
+
+                  drivers              12337
+                    driver              5332
+                      cpu_trace          224
+                        cpu_trace                  224
+
+                      security           392
+                        sec_common        96
+                          sec_common                96
+
+                        sec_trng         296
+                          sec_trng_master   
+                            sec_trng               296
+
+                      timer             1432
+                        timer                     1432
+
+                      efuse              196
+                        efuse                      196
+
+                      gpio               112
+                        gpio                       112
+
+                      pinmux             326
+                        pinctrl                    326
+
+                      pmp                116
+                        pmp                        116
+
+                      uart              2150
+                        uart                      2150
+
+                      watchdog           384
+                        watchdog                   384
+
+                    hal                 7005
+                      gpio              1754
+                        v150            1692
+                          hal_gpio_v150           1056
+                          hal_gpio_v150_regs_op.h       120
+                          hal_gpio_v150_comm.h        22
+                          hal_gpio_v150_comm       466
+                          hal_gpio_v150_regs_op        28
+
+                        hal_gpio                    62
+
+                      timer              379
+                        v150             271
+                          hal_timer_v150           271
+
+                        hal_drv_timer              108
+
+                      uart              1714
+                        v151            1632
+                          hal_uart_v151           1602
+                          hal_uart_v151_regs_op        30
+
+                        hal_uart                    82
+
+                      cpu_trace          678
+                        hal_cpu_trace              678
+
+                      security           594
+                        efuse               
+                          v151           562
+                            hal_efuse_v151         496
+                            hal_efuse_v151_reg_op        66
+
+                          hal_efuse                 32
+
+                      pinmux             472
+                        bs21             440
+                          hal_pinctrl_bs21         440
+
+                        common            32
+                          hal_pinctrl               32
+
+                      pmp                452
+                        hal_pmp                     32
+                        v31              420
+                          hal_pmp_riscv31           86
+                          hal_pmp_riscv31_regs_op       334
+
+                      reboot              78
+                        hal_reboot                  78
+
+                      watchdog           408
+                        v151             334
+                          hal_watchdog_v151        334
+
+                        hal_watchdog                74
+
+                      sec_common         312
+                        hal_sec_common             312
+
+                      sec_trng2          164
+                        hal_sec_trng2              164
+
+                open_source            13170
+                  7-zip-lzma-sdk        6028
+                    lzma_21.07              
+                      C                     
+                        LzmaDec                   6028
+
+                  GmSSL3.0              7142
+                    src                     
+                      sm3                         6914
+                      sm3_hmac                     228
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .data                                 2664
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                middleware               762
+                  chips                  701
+                    bs2x                    
+                      at                 588
+                        at_btc_cmd_table       560
+                          at_bt_cmd_table          560
+
+                        at_plt_cmd_table        28
+                          at_table                  28
+
+                      pm                  96
+                        pm_porting                  96
+
+                      dfx                  1
+                        dfx_channel                  1
+
+                      update              16
+                        common              
+                          upg_common_porting        16
+
+                  utils                   61
+                    dfx                   28
+                      diag                 2
+                        diag_service                 2
+
+                      log                  5
+                        log                          1
+                        log_oml_ota_rom              4
+
+                      log_reader           1
+                        private             
+                          log_uart                   1
+
+                      panic                4
+                        private             
+                          panic_rom                  4
+
+                      diag_dfx_cmd        16
+                        diag_mocked_shell   
+                          diag_mocked_shell         16
+
+                    nv                    17
+                      nv_storage_lib        
+                        nv_nvregion                 16
+                        nv_key                       1
+
+                    pm                    16
+                      pm_dev               8
+                        pm_dev                       8
+
+                      pm_fsm               8
+                        pm_fsm                       8
+
+                drivers                  348
+                  chips                   67
+                    bs2x                    
+                      porting             63
+                        sfc               13
+                          flash_config_info          5
+                          sfc_porting                8
+
+                        pm                 2
+                          pm_pmu            
+                            pm_pmu_porting           2
+
+                        efuse             16
+                          efuse_porting             16
+
+                        spi               12
+                          spi_porting               12
+
+                        tcxo               4
+                          tcxo_porting               4
+
+                        timer              4
+                          timer_porting              4
+
+                        watchdog          12
+                          watchdog_porting          12
+
+                      clocks               4
+                        clock_calibration            4
+
+                  drivers                281
+                    hal                  280
+                      security            48
+                        efuse               
+                          v151              
+                            hal_efuse_v151          48
+
+                      gpio                40
+                        v150                
+                          hal_gpio_v150             40
+
+                      pinmux              84
+                        bs21                
+                          hal_pinctrl_bs21          84
+
+                      pmp                  4
+                        v31                 
+                          hal_pmp_riscv31            4
+
+                      spi                 20
+                        v151                
+                          hal_spi_v151              20
+
+                      timer               24
+                        v150                
+                          hal_timer_v150            24
+
+                      uart                24
+                        v151                
+                          hal_uart_v151             24
+
+                      watchdog            36
+                        v151                
+                          hal_watchdog_v151         36
+
+                    driver                 1
+                      watchdog              
+                        watchdog                     1
+
+                include                 1362
+                  driver                    
+                    flash                   
+                      flash_others_config.h        531
+                      flash_dosilicon_config.h       178
+                      flash_gigadevice_config.h       298
+                      flash_mxic_config.h          178
+                      flash_winbond_config.h       177
+
+                application              192
+                  bs21                      
+                    standard                
+                      app_os_init                  192
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .cputrace_mem                         1020
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                drivers                     
+                  drivers                   
+                    driver                  
+                      cpu_trace             
+                        cpu_trace                 1020
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .bss                                 10364
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                middleware              3422
+                  chips                  737
+                    bs2x                    
+                      pm                 580
+                        pm_sleep         548
+                          pm_sleep_porting         548
+
+                        pm_sys            32
+                          pm_sys                    32
+
+                      at                 136
+                        at_cmd_porting      
+                          at_porting               136
+
+                      dfx                 17
+                        zdiag_adapt_sdt             17
+
+                      exception            4
+                        exception_riscv              4
+
+                  utils                 2685
+                    dfx                 1998
+                      panic               17
+                        private             
+                          panic                     17
+
+                      log_buffer          33
+                        log_buffer_reader           16
+                        log_buffer                  16
+                        log_memory_region            1
+
+                      log                 20
+                        log_printf                   4
+                        log                         11
+                        log_reg_dump                 1
+                        log_trigger                  4
+
+                      diag_dfx_cmd        45
+                        diag_mocked_shell         5
+                          diag_mocked_shell          5
+
+                        diag_system_cmd        16
+                          diag_cmd_beat_heart        16
+
+                        diag_sample_data        24
+                          diag_bt_sample_data        24
+
+                      diag               870
+                        diag_channel               108
+                        diag_cmd_router        84
+                          diag_cmd_dst              60
+                          diag_ind_dst              20
+                          diag_ind_src               4
+
+                        diag_pkt_router              4
+                        romable            4
+                          diag_rom_api               4
+
+                        diag_service               521
+                        diag_msg                     1
+                        diag_dfx                   108
+                        diag_filter                 40
+
+                      log_file           308
+                        log_file                   308
+
+                      log_reader          57
+                        private             
+                          log_oam_msg               44
+                          log_uart                  13
+
+                      preserve           252
+                        private             
+                          preserve                 252
+
+                      diag_transmit       396
+                        transmit_item              396
+
+                    at                    72
+                      at                    
+                        src                 
+                          at_base                   24
+                          at_cmd                     8
+                          at_process                16
+                          at_msg                     4
+                          at_parse                   4
+                          at_channel                16
+
+                    nv                   161
+                      nv_storage_lib        93
+                        nv_update                   81
+                        nv_nvregion                 12
+
+                      nv_storage_app        68
+                        soc_nv_storage_handle        16
+                        soc_nv_storage              52
+
+                    mips                   9
+                      private               
+                        mips                         9
+
+                    partition            208
+                      partition                    208
+
+                    pm                   201
+                      pm_sleep           165
+                        pm_sleep                   165
+
+                      pm_veto             36
+                        pm_veto                     36
+
+                    update                36
+                      common                
+                        upg_common                  36
+
+                test                    4755
+                  common                    
+                    testsuite               
+                      src                   
+                        test_suite_console         621
+                        test_suite_task            310
+                        test_suite_functions_processor      3684
+                        test_suite_channel           4
+                        test_suite_log               8
+                        test_suite_uart            128
+
+                drivers                 2175
+                  drivers               2141
+                    driver              1546
+                      cpu_trace           19
+                        cpu_trace                   19
+
+                      flash               84
+                        flash                       84
+
+                      sfc                 38
+                        sfc                         38
+
+                      gpio                 5
+                        gpio                         5
+
+                      watchdog            10
+                        watchdog                    10
+
+                      spi                  7
+                        spi                          7
+
+                      timer              885
+                        timer                      885
+
+                      security             8
+                        sec_common         4
+                          sec_common                 4
+
+                        sec_trng           4
+                          sec_trng_master   
+                            sec_trng                 4
+
+                      systick             17
+                        systick                     17
+
+                      tcxo                17
+                        tcxo                        17
+
+                      uart               456
+                        uart                       456
+
+                    hal                  595
+                      cpu_trace            1
+                        hal_cpu_trace                1
+
+                      security            17
+                        efuse               
+                          v151            13
+                            hal_efuse_v151_reg_op        12
+                            hal_efuse_v151           1
+
+                          hal_efuse                  4
+
+                      gpio               136
+                        hal_gpio                     8
+                        v150             128
+                          hal_gpio_v150_comm       128
+
+                      pinmux               4
+                        common              
+                          hal_pinctrl                4
+
+                      pmp                  4
+                        hal_pmp                      4
+
+                      sec_common          48
+                        hal_sec_common              48
+
+                      spi                216
+                        v151             192
+                          hal_spi_v151             192
+
+                        hal_spi                     24
+
+                      timer               52
+                        v150              16
+                          hal_timer_v150            16
+
+                        hal_drv_timer               36
+
+                      uart                51
+                        v151              39
+                          hal_uart_v151             39
+
+                        hal_uart                    12
+
+                      watchdog            16
+                        v151               8
+                          hal_watchdog_v151          8
+
+                        hal_watchdog                 8
+
+                      reboot               2
+                        hal_reboot                   2
+
+                      sfc                 40
+                        hal_sfc                     20
+                        hal_sfc_v150                20
+
+                      systick              4
+                        v150                
+                          hal_systick_v150_regs_op         4
+
+                      tcxo                 4
+                        hal_tcxo_v150_regs_op         4
+
+                  chips                   34
+                    bs2x                    
+                      clocks              14
+                        clocks_switch               14
+
+                      arch                 4
+                        src                 
+                          oam_trace                  4
+
+                      porting             16
+                        gpio               4
+                          gpio_porting               4
+
+                        pm                 7
+                          pm_clock          
+                            pm_clock_porting         7
+
+                        sfc                5
+                          sfc_porting                5
+
+                kernel                    12
+                  non_os                    
+                    non_os                  
+                      non_os_utils                   8
+                      non_os_nmi                     4
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .version_str                            84
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                middleware                  
+                  utils                     
+                    build_version           
+                      private               
+                        build_version               84
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .preserve                              252
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                middleware                  
+                  utils                     
+                    dfx                     
+                      preserve              
+                        private             
+                          preserve                 252
+
+
+  Section                            Total     Size
+
+  --------------------------------  --------  -----
+
+
+  .patch_data                           1036
+
+    D:                                      
+      work                                  
+        Hisilicon                           
+          Hi2821                            
+            sdk                             
+              sdk                           
+                application                 
+                  bs21                      
+                    standard                
+                      main                        1036
+
+  ====================================================
+
+  Mismatched section sizes...
+
+         .text  .lst file = 367176 (0x59A48)
+                 .du file = 70208 (0x11240)
+
+         .data  .lst file = 6400 (0x1900)
+                 .du file = 2664 (0xA68)
+
+          .bss  .lst file = 20528 (0x5030)
+                 .du file = 10364 (0x287C)
+
+  ====================================================
+

@@ -1,0 +1,3 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg0" NAME="App main @app_os_init.c(233),INFO" ID="0xa002074d" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[Mcpu mips statistics] total work time: %dms, total idle time: %dms. @app_os_init.c(237),INFO" ID="0xa002076d" />
+			</MSG_LOG>

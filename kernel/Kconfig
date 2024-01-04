@@ -1,0 +1,14 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config DRIVER_SUPPORT_LITEOS
+    bool
+    prompt "Use LiteOS"
+    default y
+    help
+        This option means support LiteOS.
+
+if DRIVER_SUPPORT_LITEOS
+    source "kernel/liteos/Kconfig"
+endif

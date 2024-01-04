@@ -1,0 +1,2 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg5" NAME="result = 0x%x, exc = 0x%x, pc = 0x%x, lr = 0x%x, sp = 0x%x @cpu_trace.c(160),INFO" ID="0xa0220505" />
+			</MSG_LOG>

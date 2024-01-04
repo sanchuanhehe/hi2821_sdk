@@ -1,0 +1,60 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+choice
+    prompt "Select PDM MIC Channel"
+    default SLE_PDM_DMIC_4
+    config SLE_PDM_DMIC_4
+        bool "PDM DMIC 4"
+    config SLE_PDM_DMIC_5
+        bool "PDM DMIC 5"
+    config SLE_PDM_DMIC_DUAL
+        bool "PDM DMIC DUAL"
+endchoice
+
+choice
+    prompt "Select PDM sample rate"
+    default SLE_PDM_SAMPLE_RATE_16K
+    config SLE_PDM_SAMPLE_RATE_8K
+        bool "PDM sample rate is 8K"
+    config SLE_PDM_SAMPLE_RATE_16K
+        bool "PDM sample rate is 16K"
+    config SLE_PDM_SAMPLE_RATE_32K
+        bool "PDM sample rate is 32K"
+    config SLE_PDM_SAMPLE_RATE_48K
+        bool "PDM sample rate is 48K"
+    config SLE_PDM_SAMPLE_RATE_96K
+        bool "PDM sample rate is 96K"
+endchoice
+
+config USB_UAC_MAX_RECORD
+    int
+    prompt "Set the max recorder size of USB UAC."
+    default 2560
+    help
+        This option means the max recorder size of USB UAC.
+
+config SLE_PDM_TRANSFER_USING_DMA
+    bool
+    prompt "Use DMA to transfer the PDM data."
+    default y
+    help
+        This option means use DMA to transfer the PDM data.
+
+config SLE_PDM_TRANSFER_LEN_OF_DMA
+    int
+    prompt "Set the length of transfer by DMA."
+    default 240
+    help
+        This option means the length of transfer by DMA.
+
+choice
+    prompt "Select SLE type"
+    default SAMPLE_SUPPORT_SLE_DONGLE
+    config SAMPLE_SUPPORT_SLE_DONGLE
+        bool "Enable SLE Dongle sample."
+    config SAMPLE_SUPPORT_SLE_CLIENT
+        bool "Enable SLE Client sample."
+endchoice

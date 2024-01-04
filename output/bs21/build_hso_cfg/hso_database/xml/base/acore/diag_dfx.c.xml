@@ -1,0 +1,9 @@
+<MSG_LOG><MSG STRUCTURE="diag_log_msg1" NAME="test_error_log. p1 = %d @diag_dfx.c(93),ERROR" ID="0xa05e02ea" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_error_log1. p1 = %x @diag_dfx.c(94),ERROR" ID="0xa05e02f2" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log p1 = %d @diag_dfx.c(95),WARNING" ID="0xa05e02fb" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log1 p1 = %d @diag_dfx.c(96),WARNING" ID="0xa05e0303" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log p1 = 0x%x @diag_dfx.c(97),INFO" ID="0xa05e030d" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log1 p1 = 0x%x @diag_dfx.c(98),INFO" ID="0xa05e0315" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log p1 = %d @diag_dfx.c(99),DBG" ID="0xa05e031e" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log1 p1 = %d @diag_dfx.c(100),DBG" ID="0xa05e0326" />
+			</MSG_LOG>

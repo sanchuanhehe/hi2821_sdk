@@ -1,0 +1,17 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+choice
+    prompt "Select sensor number"
+    default SAMPLE_BLE_SUPPORT_SENSOR_3395
+    config SAMPLE_BLE_SUPPORT_SENSOR_3395
+        bool "Select sensor paw3395."
+    config SAMPLE_BLE_SUPPORT_SENSOR_3805
+        bool "Select sensor paw3805."
+    config SAMPLE_BLE_SUPPORT_SENSOR_3220
+        bool "Select sensor paw3220."
+    config SAMPLE_BLE_SUPPORT_SENSOR_3816
+        bool "Select sensor pmw3816"
+endchoice

@@ -1,0 +1,13 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+choice
+    prompt "Select AIR MOUSE type"
+    default SAMPLE_SUPPORT_AIR_MOUSE
+    config SAMPLE_SUPPORT_AIR_MOUSE
+        bool "Enable AIR MOUSE sample."
+    config SAMPLE_SUPPORT_AIR_MOUSE_DONGLE
+        bool "Enable AIR MOUSE Dongle sample."
+endchoice

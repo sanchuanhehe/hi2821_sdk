@@ -1,0 +1,54 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+choice
+    prompt "Select USB PDM MIC Channel"
+    default USB_PDM_DMIC_4
+
+    config USB_PDM_DMIC_4
+        bool "USB_PDM_DMIC_4"
+
+    config USB_PDM_DMIC_5
+        bool "USB_PDM_DMIC_5"
+
+    config USB_PDM_DMIC_DUAL
+        bool "USB_PDM_DMIC_DUAL"
+endchoice
+
+choice
+    prompt "Select PDM sample rate"
+    default USB_PDM_SAMPLE_RATE_16K
+    config USB_PDM_SAMPLE_RATE_8K
+        bool "PDM sample rate is 8K"
+    config USB_PDM_SAMPLE_RATE_16K
+        bool "PDM sample rate is 16K"
+    config USB_PDM_SAMPLE_RATE_32K
+        bool "PDM sample rate is 32K"
+    config USB_PDM_SAMPLE_RATE_48K
+        bool "PDM sample rate is 48K"
+    config USB_PDM_SAMPLE_RATE_96K
+        bool "PDM sample rate is 96K"
+endchoice
+
+config USB_UAC_MAX_RECORD
+    int
+    prompt "Set the max recorder size of USB UAC."
+    default 2560
+    help
+        This option means the max recorder size of USB UAC.
+
+config USB_PDM_TRANSFER_USING_DMA
+    bool
+    prompt "Use DMA to transfer the PDM data."
+    default y
+    help
+        This option means use DMA to transfer the PDM data.
+
+config USB_PDM_TRANSFER_LEN_OF_DMA
+    int
+    prompt "Set the length of transfer by DMA."
+    default 128
+    help
+        This option means the length of transfer by DMA.

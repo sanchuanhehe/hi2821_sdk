@@ -1,0 +1,11 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2022-2023. All rights reserved.
+#===============================================================================
+config AT_SUPPORT_PLT
+    bool
+    prompt "platform at command"
+    default n
+    help
+        This option means at support plt.
+

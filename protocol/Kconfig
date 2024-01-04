@@ -1,0 +1,37 @@
+choice
+    prompt "Select sle ble support"
+    default SUPPORT_SLE_BLE_CENTRAL_PERIPHERAL
+    config SUPPORT_SLE_BLE_CENTRAL_PERIPHERAL
+        bool "Select sle ble central peripheral"
+    config SUPPORT_SLE_BLE_PERIPHERAL
+        bool "Select sle ble peripheral"
+    config SUPPORT_SLE_PERIPHERAL
+        bool "Select sle peripheral"
+    config SUPPORT_SLE_CENTRAL
+        bool "Select sle central"
+    config SUPPORT_BLE_PERIPHERAL
+        bool "Select ble peripheral"
+    config SUPPORT_BTC_ONLY
+        bool "Select btc only"
+endchoice
+
+config SLE_BLE_SUPPORT
+    string
+    default "sle-ble-central-peripheral" if SUPPORT_SLE_BLE_CENTRAL_PERIPHERAL
+    default "sle-ble-peripheral" if SUPPORT_SLE_BLE_PERIPHERAL
+    default "sle-peripheral" if SUPPORT_SLE_PERIPHERAL
+    default "sle-central" if SUPPORT_SLE_CENTRAL
+    default "ble-peripheral" if SUPPORT_BLE_PERIPHERAL
+    default "btc-only" if SUPPORT_BTC_ONLY
+
+menu "bt_host"
+    comment "Config bluetooth."
+    osource "protocol/bt/host/Kconfig"
+endmenu
+
+config SUPPORT_NFC
+    bool
+    prompt "Enable nfc support."
+    default n
+    help
+        This option means enable nfc support.

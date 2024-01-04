@@ -1,0 +1,18 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+config I2S_DMA_MAX_RECORD
+    int
+    prompt "Set the max recorder size of I2S."
+    default 2560
+    help
+        This option means the max recorder size of I2S.
+
+config I2S_TRANSFER_LEN_OF_DMA
+    int
+    prompt "Set the length of transfer by DMA."
+    default 128
+    help
+        This option means the length of transfer by DMA.

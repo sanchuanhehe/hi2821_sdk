@@ -1,0 +1,32 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+choice
+    prompt "Select SLE MOUSE type"
+    default SAMPLE_SUPPORT_SLE_MOUSE
+    config SAMPLE_SUPPORT_SLE_MOUSE
+        bool "Enable SLE MOUSE sample."
+        if SAMPLE_SUPPORT_SLE_MOUSE
+            osource "application/samples/products/sle_mouse_with_dongle/mouse_sensor/Kconfig"
+        endif
+    config SAMPLE_SUPPORT_SLE_MOUSE_DONGLE
+        bool "Enable SLE MOUSE Dongle sample."
+
+endchoice
+
+if SAMPLE_SUPPORT_SLE_MOUSE_DONGLE
+choice
+prompt "Select SLE dongle report rate, limit by hardware"
+default SAMPLE_SLE_DONGLE_1K
+config SAMPLE_SLE_DONGLE_1K
+    bool "Sle dongle report rate 1K"
+config SAMPLE_SLE_DONGLE_2K
+    bool "Sle dongle report rate 2K"
+config SAMPLE_SLE_DONGLE_4K
+    bool "Sle dongle report rate 4K"
+config SAMPLE_SLE_DONGLE_8K
+    bool "Sle dongle report rate 8K"
+endchoice
+endif

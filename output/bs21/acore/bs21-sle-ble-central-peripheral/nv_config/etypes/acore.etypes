@@ -1,0 +1,135 @@
+# 1 "D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/nv_config/etypes/acore.c"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdc-predef.h" 1 3 4
+# 1 "<command-line>" 2
+# 1 "D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/nv_config/etypes/acore.c"
+# 1 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/common.h" 1
+# 9 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/common.h"
+# 1 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\lib\\gcc\\riscv32-linux-musl\\7.3.0\\include\\stdint.h" 1 3
+# 9 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\lib\\gcc\\riscv32-linux-musl\\7.3.0\\include\\stdint.h" 3
+# 1 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdint.h" 1 3 4
+# 20 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdint.h" 3 4
+# 1 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 1 3 4
+# 54 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 3 4
+
+# 54 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 3 4
+typedef unsigned int uintptr_t;
+# 69 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 3 4
+typedef int intptr_t;
+# 95 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 3 4
+typedef signed char int8_t;
+
+
+
+
+typedef signed short int16_t;
+
+
+
+
+typedef signed int int32_t;
+
+
+
+
+typedef signed long long int64_t;
+
+
+
+
+typedef signed long long intmax_t;
+
+
+
+
+typedef unsigned char uint8_t;
+
+
+
+
+typedef unsigned short uint16_t;
+
+
+
+
+typedef unsigned int uint32_t;
+
+
+
+
+typedef unsigned long long uint64_t;
+# 145 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\alltypes.h" 3 4
+typedef unsigned long long uintmax_t;
+# 21 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdint.h" 2 3 4
+
+typedef int8_t int_fast8_t;
+typedef int64_t int_fast64_t;
+
+typedef int8_t int_least8_t;
+typedef int16_t int_least16_t;
+typedef int32_t int_least32_t;
+typedef int64_t int_least64_t;
+
+typedef uint8_t uint_fast8_t;
+typedef uint64_t uint_fast64_t;
+
+typedef uint8_t uint_least8_t;
+typedef uint16_t uint_least16_t;
+typedef uint32_t uint_least32_t;
+typedef uint64_t uint_least64_t;
+# 95 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdint.h" 3 4
+# 1 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\bits\\stdint.h" 1 3 4
+typedef int32_t int_fast16_t;
+typedef int32_t int_fast32_t;
+typedef uint32_t uint_fast16_t;
+typedef uint32_t uint_fast32_t;
+# 96 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\sysroot\\usr\\include\\stdint.h" 2 3 4
+# 10 "d:\\work\\hisilicon\\hi2821\\sdk\\sdk\\tools\\bin\\compiler\\riscv\\cc_riscv32_musl_b090\\cc_riscv32_musl_fp_win\\lib\\gcc\\riscv32-linux-musl\\7.3.0\\include\\stdint.h" 2 3
+# 10 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/common.h" 2
+# 36 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/common.h"
+
+# 36 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/common.h"
+typedef struct {
+    uint8_t bd_addr[6];
+    uint8_t bd_name[32];
+    uint8_t product_type;
+    uint8_t sys_mask[4];
+    uint8_t reserve[32];
+} bth_product_information_config_t;
+
+typedef struct {
+    uint8_t smp_index;
+    uint8_t keys[632];
+} bth_smp_keys_store_nv_stru_t;
+
+typedef struct {
+    uint8_t reserve[128];
+} bth_ble_nv_reserved_struct_t;
+
+
+typedef struct {
+    uint8_t sle_addr[6];
+    uint8_t sle_name[32];
+    uint8_t sys_mask[4];
+    uint8_t reserve[32];
+} sle_product_data_config_stru_t;
+
+typedef struct {
+    uint16_t config_nv_1;
+    uint16_t config_nv_2;
+    uint16_t config_nv_3;
+    uint16_t config_nv_4;
+    uint16_t config_nv_5[5];
+    uint16_t config_nv_6;
+    uint16_t config_nv_7;
+    uint16_t config_nv_8;
+    uint16_t config_nv_9;
+    uint8_t config_nv_10;
+    int8_t config_nv_11;
+    int8_t config_nv_12;
+    uint8_t flag;
+} bt_nv_cali_info_type_t;
+# 2 "D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/nv_config/etypes/acore.c" 2
+# 1 "D:/work/Hisilicon/Hi2821/sdk/sdk/middleware/chips/bs21/nv/nv_config/bs21_nv_default/include/key_id.h" 1
+# 2 "D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/nv_config/etypes/acore.c" 2

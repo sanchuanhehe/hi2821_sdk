@@ -1,0 +1,25 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config SAMPLE_ENABLE
+    bool
+    prompt "Enable Sample."
+    default n
+    help
+        This option means support Samples.
+
+config ENABLE_WIFI_SAMPLE
+    bool
+    prompt "Enable the Sample of WIFI."
+    default n
+    depends on SAMPLE_ENABLE
+    help
+        This option means enable the sample of WIFI.
+
+if SAMPLE_ENABLE
+    osource "application/samples/bt/Kconfig"
+    osource "application/samples/peripheral/Kconfig"
+    osource "application/samples/wifi/Kconfig"
+    osource "application/samples/products/Kconfig"
+endif

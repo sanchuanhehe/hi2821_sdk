@@ -1,0 +1,10 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+
+config PDM_SUPPORT_LPC
+    bool
+    prompt "PDM Support low power control, control power and clock"
+    default n
+    depends on DRIVER_SUPPORT_PDM

@@ -1,0 +1,21 @@
+#===============================================================================
+# @brief    Kconfig file.
+# Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
+#===============================================================================
+config AFE_USE_PIN1
+    int
+    prompt "Choose AFE USE pin1."
+    depends on SAMPLE_SUPPORT_AFE
+    default 30
+
+config AFE_USE_PIN2
+    int
+    prompt "Choose AFE USE pin2."
+    depends on SAMPLE_SUPPORT_AFE
+    default 31
+
+config AFE_PIN_MODE
+    int
+    prompt "Choose AFE pin mode."
+    default 0
+    depends on SAMPLE_SUPPORT_AFE
