@@ -2369,10 +2369,10 @@ g_gatt_appearance_category_type|00040520|   B  |            OBJECT|00000002|    
 g_l2cap_cid_userset |00040522|   B  |            OBJECT|00000002|     |.rom_ram_bss
 g_sm3_triggered     |00040524|   B  |            OBJECT|00000001|     |.rom_ram_bss
 _EVENEER_ROM_RAM_B  |00040525|   B  |            NOTYPE|        |     |.rom_ram_bss
+_SVENEER_TEXT       |00040528|   T  |            NOTYPE|        |     |.rom_ram_text
 __romram_bss_end__  |00040528|   B  |            NOTYPE|        |     |.rom_ram_bss
 __romtext_begin__   |00040528|   T  |            NOTYPE|        |     |.rom_ram_text
 __wrap___ashldi3    |00040528|   T  |              FUNC|        |     |.rom_ram_text
-_SVENEER_TEXT       |00040528|   T  |            NOTYPE|        |     |.rom_ram_text
 __wrap___divdi3     |00040530|   T  |              FUNC|        |     |.rom_ram_text
 __wrap___udivdi3    |00040538|   T  |              FUNC|        |     |.rom_ram_text
 __wrap___umoddi3    |00040540|   T  |              FUNC|        |     |.rom_ram_text
@@ -2947,8 +2947,8 @@ g_quit_ev           |000418f4|   A  |            NOTYPE|        |     |*ABS*
 handle_list         |000418f8|   A  |            NOTYPE|        |     |*ABS*
 handle_list_lock    |00041900|   A  |            NOTYPE|        |     |*ABS*
 __rombss_end__      |00041908|   B  |            NOTYPE|        |     |.bth_rom_bss
-__ramtext_begin__   |00041910|   T  |            NOTYPE|        |     |.plt_ramtext
 UartPuts            |00041910|   T  |              FUNC|0000001a|     |.plt_ramtext
+__ramtext_begin__   |00041910|   T  |            NOTYPE|        |     |.plt_ramtext
 oal_mem_alloc       |0004192a|   T  |              FUNC|0000000e|     |.plt_ramtext
 oal_mem_free        |00041938|   T  |              FUNC|0000000e|     |.plt_ramtext
 osal_kmalloc        |00041946|   T  |              FUNC|0000000e|     |.plt_ramtext
@@ -4365,9 +4365,9 @@ end_clear_bss_loop  |901154f8|   t  |            NOTYPE|        |     |startup
 g_build_version_information|90115518|   r  |            OBJECT|00000054|     |.version_str
 __program_size__    |90115570|   R  |            NOTYPE|        |     |.version_str
 __patch_data_load__ |90115600|   A  |            NOTYPE|        |     |*ABS*
-__sysinitcall_start |90115a10|   D  |            NOTYPE|        |     |.sysintcall.init
 __sysinitcall0_start|90115a10|   D  |            NOTYPE|        |     |.sysintcall.init
 __sysinitcall1_start|90115a10|   D  |            NOTYPE|        |     |.sysintcall.init
+__sysinitcall_start |90115a10|   D  |            NOTYPE|        |     |.sysintcall.init
 initFn_OsRegister   |90115a10|   D  |            OBJECT|00000004|     |.sysintcall.init
 __sysinitcall2_start|90115a14|   D  |            NOTYPE|        |     |.sysintcall.init
 initFn_ArchExcInit  |90115a14|   D  |            OBJECT|00000004|     |.sysintcall.init
@@ -4385,9 +4385,9 @@ __sysinitcall5_start|90115a38|   D  |            NOTYPE|        |     |.sysintca
 initFn_OsDriverBaseInit|90115a38|   D  |            OBJECT|00000004|     |.sysintcall.init
 initFn_DoInitcalls  |90115a3c|   D  |            OBJECT|00000004|     |.sysintcall.init
 __romtext_load__    |90115a40|   A  |            NOTYPE|        |     |*ABS*
-__sysinitcall_end   |90115a40|   D  |            NOTYPE|        |     |.sysintcall.init
 __sysinitcall6_start|90115a40|   D  |            NOTYPE|        |     |.sysintcall.init
 __sysinitcall7_start|90115a40|   D  |            NOTYPE|        |     |.sysintcall.init
+__sysinitcall_end   |90115a40|   D  |            NOTYPE|        |     |.sysintcall.init
 __ramtext_load__    |90116ab0|   A  |            NOTYPE|        |     |*ABS*
 __btc_ramtext_load__|90120378|   A  |            NOTYPE|        |     |*ABS*
 __flash_text_begin_ |90121f80|   T  |            NOTYPE|        |     |.text

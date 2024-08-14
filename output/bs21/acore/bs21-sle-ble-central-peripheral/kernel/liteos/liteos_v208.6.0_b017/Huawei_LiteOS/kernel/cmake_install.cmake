@@ -1,8 +1,8 @@
-# Install script for directory: D:/work/Hisilicon/Hi2821/sdk/sdk/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel
+# Install script for directory: /sdk/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "c:/Program Files (x86)/bs21_CFBB")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,23 +32,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "TRUE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/work/Hisilicon/Hi2821/sdk/sdk/tools/bin/compiler/riscv/cc_riscv32_musl_b090/cc_riscv32_musl_fp_win/bin/riscv32-linux-musl-objdump.exe")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/base/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/base/cmake_install.cmake")
+  include("/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/extended/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/extended/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("D:/work/Hisilicon/Hi2821/sdk/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/init/cmake_install.cmake")
+  include("/sdk/output/bs21/acore/bs21-sle-ble-central-peripheral/kernel/liteos/liteos_v208.6.0_b017/Huawei_LiteOS/kernel/init/cmake_install.cmake")
 endif()
 

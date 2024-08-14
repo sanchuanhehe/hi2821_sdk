@@ -22,7 +22,7 @@ Ninja
 -DBIN_NAME=application
 -DCCFLAGS=-std=gnu99;-Wall;-Werror;-Wextra;-Winit-self;-Wpointer-arith;-Wstrict-prototypes;-fno-strict-aliasing;-Os;-fno-unwind-tables;-ffreestanding;-fdata-sections;-Wno-implicit-fallthrough;-ffunction-sections;-nostdlib;-pipe;-fno-tree-scev-cprop;-fno-common;-mpush-pop;-msmall-data-limit=0;-fno-ipa-ra;-Wtrampolines;-Wlogical-op;-Wjump-misses-init;-Wa,-enable-c-lbu-sb;-Wa,-enable-c-lhu-sh;-fimm-compare;-femit-muliadd;-fmerge-immshf;-femit-uxtb-uxth;-femit-lli;-femit-clz;-fldm-stm-optimize;-g;-mabi=ilp32f;-march=rv32imfc;-madjust-regorder;-madjust-const-cost;-freorder-commu-args;-fimm-compare-expand;-frmv-str-zero;-mfp-const-opt;-mswitch-jump-table;-frtl-sequence-abstract;-frtl-hoist-sink;-fsafe-alias-multipointer;-finline-optimize-size;--short-enums;-fmuliadd-expand;-mlli-expand;-Wa,-mcjal-expand;-foptimize-reg-alloc;-fsplit-multi-zero-assignments;-floop-optimize-size;-mpattern-abstract;-foptimize-pro-and-epilogue
 -DROM_CCFLAGS=-mabi=ilp32f;-march=rv32imfc;-madjust-regorder;-madjust-const-cost;-freorder-commu-args;-fimm-compare-expand;-frmv-str-zero;-mfp-const-opt;-frtl-sequence-abstract;-frtl-hoist-sink;-fsafe-alias-multipointer;-finline-optimize-size;-fmuliadd-expand;-mlli-expand;-Wa,-mcjal-expand;-foptimize-reg-alloc;-fsplit-multi-zero-assignments;-floop-optimize-size;-foptimize-pro-and-epilogue;--short-enums;-fno-inline-functions-called-once;-fno-inline-small-functions;-std=gnu99;-Wall;-Werror;-Wextra;-Winit-self;-Wpointer-arith;-Wstrict-prototypes;-fno-strict-aliasing;-Os;-fno-unwind-tables;-ffreestanding;-fdata-sections;-Wno-implicit-fallthrough;-ffunction-sections;-nostdlib;-pipe;-fno-tree-scev-cprop;-fno-common;-mpush-pop;-msmall-data-limit=0;-fno-ipa-ra;-Wtrampolines;-Wlogical-op;-Wjump-misses-init;-Wa,-enable-c-lbu-sb;-Wa,-enable-c-lhu-sh;-fimm-compare;-femit-muliadd;-fmerge-immshf;-femit-uxtb-uxth;-femit-lli;-femit-clz;-fldm-stm-optimize;-g
--DLINKFLAGS=-Wl,--cjal-relax;-Wl,--dslf;-Wl,--gc-section;-nostdlib;-static;-Wl,--enjal16;-g;-Wl,--just-symbols=D:\work\Hisilicon\Hi2821\sdk\sdk/drivers/chips/bs21/rom_info/acore/acore.sym
+-DLINKFLAGS=-Wl,--cjal-relax;-Wl,--dslf;-Wl,--gc-section;-nostdlib;-static;-Wl,--enjal16;-g;-Wl,--just-symbols=/sdk/drivers/chips/bs21/rom_info/acore/acore.sym
 -DAPPLICATION=standard
 -DHSO_ENABLE_BT=True
 -DHSO_ENABLE=True
@@ -30,7 +30,7 @@ Ninja
 -DBUILD_ROM_CALLBACK=False
 -DFIXED_ROM=True
 -DFIXED_ROM_PATH=<root>/interim_binary/bs21/bin/rom_bin/application_rom.bin
--DROM_SYM_PATH=D:\work\Hisilicon\Hi2821\sdk\sdk/drivers/chips/bs21/rom_info/acore/acore.sym
+-DROM_SYM_PATH=/sdk/drivers/chips/bs21/rom_info/acore/acore.sym
 -DROM_RAM_CHECK=True
 -DROM_RAM_COMPARE=True
 -DPACKET=True
@@ -40,12 +40,12 @@ Ninja
 -DNV_CFG=bs21_nv_default
 -DUPG_PKG=application
 -DARCH_FAMILY=riscv
--DBUILD_PLATFORM=windows
+-DBUILD_PLATFORM=linux
 -DTARGET_COMMAND=bs21-sle-ble-central-peripheral
 -DBUILD_LEVEL=normal
--DCMAKE_TOOLCHAIN_FILE=D:\work\Hisilicon\Hi2821\sdk\sdk\build\toolchains\riscv32_musl_b090_fp.cmake
--DPY_PATH=D:\work\Hisilicon\Hi2821\DevTools_CFBB\thirdparty\python\python.exe
-D:\work\Hisilicon\Hi2821\sdk\sdk
+-DCMAKE_TOOLCHAIN_FILE=/sdk/build/toolchains/riscv32_musl_b090_fp.cmake
+-DPY_PATH=/usr/bin/python3
+/sdk
 -DROM_CHECK=False
 -DPKG_TARGET_NAME=bs21-sle-ble-central-peripheral
 -DBUILD_TARGET_NAME=bs21_sle_ble_central_peripheral

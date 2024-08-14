@@ -1,0 +1,27 @@
+{
+  "name": "Near Link SDK_bs21",
+  "context": "..",
+  "dockerFile": "Dockerfile",
+  "workspaceFolder": "/sdk",
+  "remoteUser": "root",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/sdk,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "chmod -R +x /sdk",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "GitHub.copilot",
+        "twxs.cmake",
+        "ms-vscode.cpptools",
+        "cschlosser.doxdocgen",
+        "vinirossa.vscode-gitandgithub-pack",
+        "ms-python.debugpy",
+        "ms-python.python",
+        "luveti.kconfig",
+        "intellsmi.comment-translate"
+      ]
+    }
+  }
+}

@@ -72,32 +72,7 @@
         </USERPLANE_LOG>
     </SUBSYSTEM>
     <SUBSYSTEM NAME="acore" DATA_STRUCT_FILE="..\diag\prot_core_hso_msg_struct_def.txt" DESCRIPTION="" MULTIMODE="acore">
-        <MSG_LOG><MSG STRUCTURE="diag_log_msg0" NAME="App main @app_os_init.c(233),INFO" ID="0xa002074d" />
-			<MSG STRUCTURE="diag_log_msg2" NAME="[Mcpu mips statistics] total work time: %dms, total idle time: %dms. @app_os_init.c(237),INFO" ID="0xa002076d" />
-			<MSG STRUCTURE="diag_log_msg2" NAME="[LOW_POWER]img download size:0x%x is not 4 byte aligned, type:%d @cpu_load.c(121),INFO" ID="0xa04e03cd" />
-			<MSG STRUCTURE="diag_log_msg2" NAME="[%d]core flash address[0x%x] translate int mcu flash. @cpu_load.c(179),INFO" ID="0xa04e059d" />
-			<MSG STRUCTURE="diag_log_msg5" NAME="result = 0x%x, exc = 0x%x, pc = 0x%x, lr = 0x%x, sp = 0x%x @cpu_trace.c(160),INFO" ID="0xa0220505" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_error_log. p1 = %d @diag_dfx.c(93),ERROR" ID="0xa05e02ea" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_error_log1. p1 = %x @diag_dfx.c(94),ERROR" ID="0xa05e02f2" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log p1 = %d @diag_dfx.c(95),WARNING" ID="0xa05e02fb" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log1 p1 = %d @diag_dfx.c(96),WARNING" ID="0xa05e0303" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log p1 = 0x%x @diag_dfx.c(97),INFO" ID="0xa05e030d" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log1 p1 = 0x%x @diag_dfx.c(98),INFO" ID="0xa05e0315" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log p1 = %d @diag_dfx.c(99),DBG" ID="0xa05e031e" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log1 p1 = %d @diag_dfx.c(100),DBG" ID="0xa05e0326" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Change log level failed, message is %d @log.c(311),INFO" ID="0xa01409bd" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Change log level to %d @log.c(319),INFO" ID="0xa01409fd" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Start DFT with hook_type=%d @log_oam_msg.c(269),INFO" ID="0xa008086d" />
-			<MSG STRUCTURE="diag_log_msg2" NAME="[OML]recv oml msg type:%d, length:%d @log_oam_msg.c(515),INFO" ID="0xa008101d" />
-			<MSG STRUCTURE="diag_log_msg0" NAME="receive hci message succ! @log_oam_msg.c(544),INFO" ID="0xa0081105" />
-			<MSG STRUCTURE="diag_log_msg1" NAME="[OML]recv hci msg length:%d @log_oam_msg.c(547),INFO" ID="0xa008111d" />
-			<MSG STRUCTURE="diag_log_msg3" NAME="[PF][DUMP INFO] stack point: 0x%x, stack address: 0x%x, stack size: 0x%x @log_oml_exception.c(425),ERROR" ID="0xa00a0d4a" />
-			<MSG STRUCTURE="diag_log_msg5" NAME="[STACK] id:%d, top:0x%x, size:0x%x, task usage peak:%x, sp:0x%x @memory_info.c(40),INFO" ID="0xa0640145" />
-			<MSG STRUCTURE="diag_log_msg4" NAME="[HEAP_STAT1] total:0x%x, used:0x%x, free:0x%x, usage waterline:0x%x @memory_info.c(54),INFO" ID="0xa06401b5" />
-			<MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:id:%d,code:0x%x,call:0x%x @panic.c(148),ERROR" ID="0xa00e04a2" />
-			<MSG STRUCTURE="diag_log_msg3" NAME="==[system assert]:id:%d,code:0x%x,call:0x%x @panic.c(153),ERROR" ID="0xa00e04ca" />
-			<MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:normal core:%d,pc:0x%x,lr:0x%x @panic.c(167),ERROR" ID="0xa00e053a" />
-			<MSG STRUCTURE="diag_log_msg4" NAME="[LOW_POWER], ana_status_0:0x%x, ana_status_1:0x%x, fnpll:0x%x, ulpfll:0x%x @pmu_interrupt.c(114),ERROR" ID="0xa0340392" />
+        <MSG_LOG><MSG STRUCTURE="diag_log_msg5" NAME="result = 0x%x, exc = 0x%x, pc = 0x%x, lr = 0x%x, sp = 0x%x @cpu_trace.c(160),INFO" ID="0xa0220505" />
 			<MSG STRUCTURE="diag_log_msg0" NAME="System Boot Normal @preserve.c(452),INFO" ID="0xa0460e25" />
 			<MSG STRUCTURE="diag_log_msg0" NAME="System Boot Abnoraml, watchdog timeout @preserve.c(456),INFO" ID="0xa0460e45" />
 			<MSG STRUCTURE="diag_log_msg0" NAME="System Boot Panic @preserve.c(460),INFO" ID="0xa0460e65" />
@@ -112,6 +87,31 @@
 			<MSG STRUCTURE="diag_log_msg3" NAME="panic id:0x%x, panic code: 0x%x, panic caller: 0x%x @preserve.c(508),INFO" ID="0xa0460fe5" />
 			<MSG STRUCTURE="diag_log_msg2" NAME="bt exception reboot with pc:0x%x, lr: 0x%x @preserve.c(518),INFO" ID="0xa0461035" />
 			<MSG STRUCTURE="diag_log_msg2" NAME="app exception reboot pc:0x%x, lr: 0x%x @preserve.c(529),INFO" ID="0xa046108d" />
+			<MSG STRUCTURE="diag_log_msg0" NAME="App main @app_os_init.c(233),INFO" ID="0xa002074d" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[Mcpu mips statistics] total work time: %dms, total idle time: %dms. @app_os_init.c(237),INFO" ID="0xa002076d" />
+			<MSG STRUCTURE="diag_log_msg5" NAME="[STACK] id:%d, top:0x%x, size:0x%x, task usage peak:%x, sp:0x%x @memory_info.c(40),INFO" ID="0xa0640145" />
+			<MSG STRUCTURE="diag_log_msg4" NAME="[HEAP_STAT1] total:0x%x, used:0x%x, free:0x%x, usage waterline:0x%x @memory_info.c(54),INFO" ID="0xa06401b5" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[LOW_POWER]img download size:0x%x is not 4 byte aligned, type:%d @cpu_load.c(121),INFO" ID="0xa04e03cd" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[%d]core flash address[0x%x] translate int mcu flash. @cpu_load.c(179),INFO" ID="0xa04e059d" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="[PF][DUMP INFO] stack point: 0x%x, stack address: 0x%x, stack size: 0x%x @log_oml_exception.c(425),ERROR" ID="0xa00a0d4a" />
+			<MSG STRUCTURE="diag_log_msg4" NAME="[LOW_POWER], ana_status_0:0x%x, ana_status_1:0x%x, fnpll:0x%x, ulpfll:0x%x @pmu_interrupt.c(114),ERROR" ID="0xa0340392" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Start DFT with hook_type=%d @log_oam_msg.c(269),INFO" ID="0xa008086d" />
+			<MSG STRUCTURE="diag_log_msg2" NAME="[OML]recv oml msg type:%d, length:%d @log_oam_msg.c(515),INFO" ID="0xa008101d" />
+			<MSG STRUCTURE="diag_log_msg0" NAME="receive hci message succ! @log_oam_msg.c(544),INFO" ID="0xa0081105" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="[OML]recv hci msg length:%d @log_oam_msg.c(547),INFO" ID="0xa008111d" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Change log level failed, message is %d @log.c(311),INFO" ID="0xa01409bd" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="[INFO]:Change log level to %d @log.c(319),INFO" ID="0xa01409fd" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:id:%d,code:0x%x,call:0x%x @panic.c(148),ERROR" ID="0xa00e04a2" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="==[system assert]:id:%d,code:0x%x,call:0x%x @panic.c(153),ERROR" ID="0xa00e04ca" />
+			<MSG STRUCTURE="diag_log_msg3" NAME="==[system panic]:normal core:%d,pc:0x%x,lr:0x%x @panic.c(167),ERROR" ID="0xa00e053a" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_error_log. p1 = %d @diag_dfx.c(93),ERROR" ID="0xa05e02ea" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_error_log1. p1 = %x @diag_dfx.c(94),ERROR" ID="0xa05e02f2" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log p1 = %d @diag_dfx.c(95),WARNING" ID="0xa05e02fb" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_warning_log1 p1 = %d @diag_dfx.c(96),WARNING" ID="0xa05e0303" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log p1 = 0x%x @diag_dfx.c(97),INFO" ID="0xa05e030d" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_info_log1 p1 = 0x%x @diag_dfx.c(98),INFO" ID="0xa05e0315" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log p1 = %d @diag_dfx.c(99),DBG" ID="0xa05e031e" />
+			<MSG STRUCTURE="diag_log_msg1" NAME="test_debug_log1 p1 = %d @diag_dfx.c(100),DBG" ID="0xa05e0326" />
 			</MSG_LOG><LAYER_LOG>
         </LAYER_LOG>
         <USERPLANE_LOG>
