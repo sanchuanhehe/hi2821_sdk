@@ -4,3 +4,4 @@ output
 **/__pycache__
 *.pyc
 interim_binary
+.clangd

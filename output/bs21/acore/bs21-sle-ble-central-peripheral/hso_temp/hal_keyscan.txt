@@ -1,1 +1,0 @@
-,/sdk/middleware/chips/bs2x/dfx/include/log_def_bt.h,/sdk/middleware/chips/bs2x/dfx/include/log_def_dsp.h,/sdk/middleware/chips/bs2x/dfx/include/log_def_pf.h####/sdk/drivers/drivers/hal/keyscan/hal_keyscan.c,/sdk/drivers/drivers/hal/keyscan/hal_keyscan_v150.c,/sdk/drivers/drivers/hal/keyscan/hal_keyscan_v150_regs_op.c

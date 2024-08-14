@@ -1,1 +1,0 @@
-,/sdk/middleware/chips/bs2x/dfx/include/log_def_bt.h,/sdk/middleware/chips/bs2x/dfx/include/log_def_dsp.h,/sdk/middleware/chips/bs2x/dfx/include/log_def_pf.h####/sdk/application/demo/demo.c

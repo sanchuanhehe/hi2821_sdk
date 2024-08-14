@@ -165,7 +165,7 @@ class CMakeBuilder(BuildEnvironment):
             env.extend("defines", "NO_TIMEOUT")
         if self.build_as_lib:
             env.add("GEN_ONLY_LIB_PATH")
-        self.cmake_cmd = ['cmake', '-G', self.generator, '-Wno-dev', '--no-warn-unused-cli', '-DCMAKE_C_COMPILER_WORKS=TRUE', '-DCMAKE_CXX_COMPILER_WORKS=TRUE']
+        self.cmake_cmd = ['cmake', '-G', self.generator, '-Wno-dev', '--no-warn-unused-cli', '-DCMAKE_C_COMPILER_WORKS=TRUE', '-DCMAKE_CXX_COMPILER_WORKS=TRUE','-DCMAKE_EXPORT_COMPILE_COMMANDS=ON']
         if env.get('fp_enable'):
             env.append('defines', 'SUPPORT_CALLSTACK')
             env.append('ccflags', '-fno-omit-frame-pointer')
