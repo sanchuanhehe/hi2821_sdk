@@ -43,3 +43,6 @@ RUN pip3 install pyyaml
 
 # 设置环境变量export LC_ALL=C.UTF-8
 ENV LC_ALL=C.UTF-8
+
+# 添加环境变量 PATH /sdk/tools/bin/compiler/riscv/cc_riscv32_musl_b090/cc_riscv32_musl_fp/bin
+ENV PATH="/sdk/tools/bin/compiler/riscv/cc_riscv32_musl_b090/cc_riscv32_musl_fp/bin:${PATH}"
