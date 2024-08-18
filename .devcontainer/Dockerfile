@@ -18,7 +18,8 @@ RUN apt-get update && apt-get upgrade -y && \
     git \
     bash \
     ninja-build \
-    unzip
+    unzip \
+    doxygen
 
 # 配置shell为bash
 RUN echo "dash dash/sh boolean false" | debconf-set-selections && \
