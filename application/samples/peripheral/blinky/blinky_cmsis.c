@@ -16,6 +16,11 @@
 #define BLINKY_TASK_STACK_SIZE    0x1000
 #define BLINKY_TASK_PRIO          (osPriority_t)(17)
 
+#ifndef CONFIG_BLINKY_TASK_STACK_SIZE
+#define BSP_LED_0 S_MGPIO31
+#endif
+
+
 static void *blinky_task(const char *arg)
 {
     unused(arg);

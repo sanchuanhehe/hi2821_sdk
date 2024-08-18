@@ -15,6 +15,7 @@
 
 #define BLINKY_TASK_STACK_SIZE 0x400
 #define BLINKY_TASK_PRIO (osPriority_t)(17)
+
 #ifndef CONFIG_BLINKY_DURATION_MS
 #define CONFIG_BLINKY_DURATION_MS 1000
 #endif
@@ -34,7 +35,7 @@ static int blinky_task(void *arg) {
   while (1) {
     osal_mdelay(CONFIG_BLINKY_DURATION_MS);
     uapi_gpio_toggle(BSP_LED_0);
-    test_suite_log_stringf("Blinky working.\r\n");
+    // test_suite_log_stringf("Blinky working.\r\n");
   }
 
   return 0;

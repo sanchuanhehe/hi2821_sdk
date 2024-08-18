@@ -64,6 +64,8 @@ target = {
             "update_storage_porting",
             "ota_upgrade",
             "pm_sys",
+            "-:test_usb_unified",
+            "blinky",
         ],
         "rom_component": ["bgtp_rom", "libboundscheck", "bt_host_rom", "bg_common_rom"],
         "ram_component_set": [

@@ -3,3 +3,10 @@
 # Copyright (c) @CompanyNameMagicTag 2023-2023. All rights reserved.
 #===============================================================================
 osource "application/samples/Kconfig"
+
+config APP_ENABLE
+    bool
+    prompt "Enable APP."
+    default n
+    help
+        This option means support APPs.
