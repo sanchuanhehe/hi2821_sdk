@@ -20,7 +20,8 @@
         "ms-python.debugpy",
         "ms-python.python",
         "luveti.kconfig",
-        "intellsmi.comment-translate"
+        "intellsmi.comment-translate",
+        "KevinRose.vsc-python-indent"
       ]
     }
   }
