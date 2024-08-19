@@ -22,7 +22,8 @@
         "luveti.kconfig",
         "intellsmi.comment-translate",
         "KevinRose.vsc-python-indent",
-        "ms-vscode.vscode-serial-monitor"
+        "ms-vscode.vscode-serial-monitor",
+        "Gruntfuggly.todo-tree"
       ]
     }
   }

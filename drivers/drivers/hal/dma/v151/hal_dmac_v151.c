@@ -67,7 +67,7 @@ static errcode_t hal_dmac_v151_init(void)
         return ERRCODE_DMA_REG_ADDR_INVALID;
     }
 
-    hal_dma_reset();
+    hal_dma_reset();//TODO:这里有问题
     return hal_dma_mem_init(sizeof(hal_dma_lli_t));
 }
 
