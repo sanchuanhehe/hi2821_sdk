@@ -42,9 +42,9 @@ static void app_spi_init_pin(void) {
 }
 
 static void app_spi_master_init_config(void) {
-  // #ifdef debug
+  #ifdef debug
   osal_printk("spi%d master init start!\r\n", SPI_BUS_0);//TODO:debug
-  // #endif
+  #endif
   spi_attr_t config = {0};
   spi_extra_attr_t ext_config = {0};
 
@@ -77,9 +77,9 @@ static void app_spi_master_init_config(void) {
   } else {
     osal_printk("uapi_spi_init success .\n");
   }
-  // #ifdef debug
+  #ifdef debug
   osal_printk("spi%d master init end!\r\n", SPI_BUS_0);//TODO:debug
-  // #endif
+  #endif
 }
 
 static void *spi_master_task(const char *arg) {
