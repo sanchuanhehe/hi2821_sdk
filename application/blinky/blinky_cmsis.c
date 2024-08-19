@@ -8,8 +8,10 @@
  */
 #include "app_init.h"
 #include "cmsis_os2.h"
+#include "dma.h"
 #include "osal_debug.h"
 #include "pinctrl.h"
+#include "soc_osal.h"
 #include "spi.h"
 
 #define SPI_SLAVE_NUM 1
@@ -22,17 +24,27 @@
 #define SPI_TMOD 0
 #define SPI_WAIT_CYCLES 0x10
 
-#define SPI_TASK_STACK_SIZE 0x1000
+#define SPI_TASK_STACK_SIZE 0x2000
 #define SPI_TASK_DURATION_MS 500
-#define SPI_TASK_PRIO (osPriority_t)(17)
+#define SPI_TASK_PRIO OSAL_TASK_PRIORITY_HIGH
 
 #define SPI_TRANSFER_LEN 20
 
+#ifndef debug
+#define debug
+#endif
+
 static void app_spi_init_pin(void) {
-  uapi_pin_set_mode(S_MGPIO11, HAL_PIO_SPI0_TXD);
+  errcode_t ret = uapi_pin_set_mode(S_MGPIO11, HAL_PIO_SPI0_TXD);
+  if (ret != ERRCODE_SUCC) {
+    osal_printk("set pin mode failed .\n");
+  }
 }
 
 static void app_spi_master_init_config(void) {
+  #ifdef debug
+  osal_printk("spi%d master init start!\r\n", SPI_BUS_0);
+  #endif
   spi_attr_t config = {0};
   spi_extra_attr_t ext_config = {0};
 
@@ -49,9 +61,25 @@ static void app_spi_master_init_config(void) {
   config.sste = 1;
 
   ext_config.qspi_param.wait_cycles = SPI_WAIT_CYCLES;
-  uapi_dma_init();
-  uapi_dma_open();
-  uapi_spi_init(SPI_BUS_0, &config, &ext_config);
+  errcode_t ret;
+  // ret = uapi_dma_init();
+  // if (ret != ERRCODE_SUCC) {
+  //   osal_printk("uapi_dma_init failed .\n");
+  // }
+  // ret = uapi_dma_open();
+  // if (ret != ERRCODE_SUCC) {
+  //   osal_printk("uapi_dma_init failed .\n");
+  // }
+  ret = uapi_spi_init(SPI_BUS_0, &config, &ext_config);
+  if (ret != ERRCODE_SUCC) {
+    osal_printk("uapi_spi_init failed .\n");
+    osal_printk("errcode = %d\n", ret);
+  } else {
+    osal_printk("uapi_spi_init success .\n");
+  }
+  #ifdef debug
+  osal_printk("spi%d master init end!\r\n", SPI_BUS_0);
+  #endif
 }
 
 static void *spi_master_task(const char *arg) {
@@ -76,8 +104,7 @@ static void *spi_master_task(const char *arg) {
   while (1) {
     osDelay(SPI_TASK_DURATION_MS);
     osal_printk("spi%d master send start!\r\n", SPI_BUS_0);
-    if (uapi_spi_master_write(SPI_BUS_0, &data, 0xFFFFFFFF) ==
-        ERRCODE_SUCC) {
+    if (uapi_spi_master_write(SPI_BUS_0, &data, 0xFFFFFFFF) == ERRCODE_SUCC) {
       osal_printk("spi%d master send succ!\r\n", SPI_BUS_0);
     } else {
       continue;
@@ -88,19 +115,22 @@ static void *spi_master_task(const char *arg) {
 }
 
 static void spi_master_entry(void) {
-  osThreadAttr_t attr;
-
-  attr.name = "SpiMasterTask";
-  attr.attr_bits = 0U;
-  attr.cb_mem = NULL;
-  attr.cb_size = 0U;
-  attr.stack_mem = NULL;
-  attr.stack_size = SPI_TASK_STACK_SIZE;
-  attr.priority = SPI_TASK_PRIO;
-
-  if (osThreadNew((osThreadFunc_t)spi_master_task, NULL, &attr) == NULL) {
-    /* Create task fail. */
+  int ret;
+  osal_task *taskid;
+  // 创建任务调度
+  osal_kthread_lock();
+  // 创建任务
+  taskid = osal_kthread_create((osal_kthread_handler)spi_master_task, NULL,
+                               "spi_master_task", SPI_TASK_STACK_SIZE);
+  if (taskid == NULL) {
+    osal_printk("create spi_master_task failed .\n");
+    return;
   }
+  ret = osal_kthread_set_priority(taskid, SPI_TASK_PRIO);
+  if (ret != OSAL_SUCCESS) {
+    osal_printk("set spi_master_task priority failed .\n");
+  }
+  osal_kthread_unlock();
 }
 
 /* Run the spi_master_entry. */

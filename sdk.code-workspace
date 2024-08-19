@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions.autoUpdate": true,
+	"remote.extensionKind": {
+		"ms-vscode.vscode-serial-monitor": [
+			"ui"
+		]
+	}
+}

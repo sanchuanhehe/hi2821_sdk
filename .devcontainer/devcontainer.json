@@ -21,7 +21,8 @@
         "ms-python.python",
         "luveti.kconfig",
         "intellsmi.comment-translate",
-        "KevinRose.vsc-python-indent"
+        "KevinRose.vsc-python-indent",
+        "ms-vscode.vscode-serial-monitor"
       ]
     }
   }
