@@ -30,9 +30,6 @@
 
 static void app_spi_init_pin(void) {
   uapi_pin_set_mode(S_MGPIO11, HAL_PIO_SPI0_TXD);
-  // uapi_pin_set_mode(CONFIG_SPI_DO_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
-  // uapi_pin_set_mode(CONFIG_SPI_CLK_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
-  // uapi_pin_set_mode(CONFIG_SPI_CS_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
 }
 
 static void app_spi_master_init_config(void) {

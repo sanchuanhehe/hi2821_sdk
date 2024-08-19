@@ -18,6 +18,7 @@ def generate_clangd_config(
     :param target: 指定目标平台，默认为 'riscv32-linux-musl'。
     :param march: 指定架构的特性集，默认为 'rv32imaf'。
     :param mabi: 指定应用二进制接口，默认为 'ilp32f'。
+    :param sysroot_path: 指定 sysroot 路径，默认为 None。
     """
     print("生成 .clangd 配置文件...")
 
