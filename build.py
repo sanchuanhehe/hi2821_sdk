@@ -81,5 +81,5 @@ if not compilation_database_path:
     print("Error: compile_commands.json not found in any directory.")
     sys.exit(1)
 
-# 调用函数生成 .clangd 文件
-generate_clangd_config(output_path='.clangd', compilation_database_path=compilation_database_path)
+# 调用函数生成 .clangd 文件 sysroot_path 为 tools/bin/compiler/riscv/cc_riscv32_musl_b090/cc_riscv32_musl_fp/sysroot
+generate_clangd_config(output_path='.clangd', compilation_database_path=compilation_database_path ,sysroot_path = os.path.join(root_dir, 'tools', 'bin', 'compiler', 'riscv', 'cc_riscv32_musl_b090', 'cc_riscv32_musl_fp', 'sysroot'))

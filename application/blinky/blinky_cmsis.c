@@ -26,8 +26,10 @@
 #define SPI_TASK_DURATION_MS 500
 #define SPI_TASK_PRIO (osPriority_t)(17)
 
+#define SPI_TRANSFER_LEN 20
+
 static void app_spi_init_pin(void) {
-  uapi_pin_set_mode(CONFIG_SPI_DI_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
+  uapi_pin_set_mode(S_MGPIO11, HAL_PIO_SPI0_TXD);
   // uapi_pin_set_mode(CONFIG_SPI_DO_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
   // uapi_pin_set_mode(CONFIG_SPI_CLK_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
   // uapi_pin_set_mode(CONFIG_SPI_CS_MASTER_PIN, CONFIG_SPI_MASTER_PIN_MODE);
@@ -52,7 +54,7 @@ static void app_spi_master_init_config(void) {
   ext_config.qspi_param.wait_cycles = SPI_WAIT_CYCLES;
   uapi_dma_init();
   uapi_dma_open();
-  uapi_spi_init(CONFIG_SPI_MASTER_BUS_ID, &config, &ext_config);
+  uapi_spi_init(SPI_BUS_0, &config, &ext_config);
 }
 
 static void *spi_master_task(const char *arg) {
@@ -64,37 +66,24 @@ static void *spi_master_task(const char *arg) {
   app_spi_master_init_config();
 
   /* SPI data config. */
-  uint8_t tx_data[CONFIG_SPI_TRANSFER_LEN] = {0};
-  for (uint32_t loop = 0; loop < CONFIG_SPI_TRANSFER_LEN; loop++) {
+  uint8_t tx_data[SPI_TRANSFER_LEN] = {0};
+  for (uint32_t loop = 0; loop < SPI_TRANSFER_LEN; loop++) {
     tx_data[loop] = (loop & 0xFF);
   }
-  uint8_t rx_data[CONFIG_SPI_TRANSFER_LEN] = {0};
+
   spi_xfer_data_t data = {
       .tx_buff = tx_data,
-      .tx_bytes = CONFIG_SPI_TRANSFER_LEN,
-      .rx_buff = rx_data,
-      .rx_bytes = CONFIG_SPI_TRANSFER_LEN,
+      .tx_bytes = SPI_TRANSFER_LEN,
   };
 
   while (1) {
     osDelay(SPI_TASK_DURATION_MS);
-    osal_printk("spi%d master send start!\r\n", CONFIG_SPI_MASTER_BUS_ID);
-    if (uapi_spi_master_write(CONFIG_SPI_MASTER_BUS_ID, &data, 0xFFFFFFFF) ==
+    osal_printk("spi%d master send start!\r\n", SPI_BUS_0);
+    if (uapi_spi_master_write(SPI_BUS_0, &data, 0xFFFFFFFF) ==
         ERRCODE_SUCC) {
-      osal_printk("spi%d master send succ!\r\n", CONFIG_SPI_MASTER_BUS_ID);
+      osal_printk("spi%d master send succ!\r\n", SPI_BUS_0);
     } else {
       continue;
-    }
-    osal_printk("spi%d master receive start!\r\n", CONFIG_SPI_MASTER_BUS_ID);
-    if (uapi_spi_master_read(CONFIG_SPI_MASTER_BUS_ID, &data, 0xFFFFFFFF) ==
-        ERRCODE_SUCC) {
-#ifndef CONFIG_SPI_SUPPORT_INTERRUPT
-      for (uint32_t i = 0; i < data.rx_bytes; i++) {
-        osal_printk("spi%d master receive data is %x\r\n",
-                    CONFIG_SPI_MASTER_BUS_ID, data.rx_buff[i]);
-      }
-#endif
-      osal_printk("spi%d master receive succ!\r\n", CONFIG_SPI_MASTER_BUS_ID);
     }
   }
 
