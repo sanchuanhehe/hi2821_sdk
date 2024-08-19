@@ -34,6 +34,10 @@
 #define debug
 #endif
 
+#ifndef dma_enable
+// #define dma_enable
+#endif
+
 static void app_spi_init_pin(void) {
   errcode_t ret = uapi_pin_set_mode(S_MGPIO11, HAL_PIO_SPI0_TXD);
   if (ret != ERRCODE_SUCC) {
@@ -41,10 +45,11 @@ static void app_spi_init_pin(void) {
   }
 }
 
-static void app_spi_master_init_config(void) {
-  #ifdef debug
-  osal_printk("spi%d master init start!\r\n", SPI_BUS_0);//TODO:debug
-  #endif
+static inline void __attribute__((always_inline))
+app_spi_master_init_config(void) {
+#ifdef debug
+  osal_printk("spi%d master init start!\r\n", SPI_BUS_0); // TODO:debug
+#endif
   spi_attr_t config = {0};
   spi_extra_attr_t ext_config = {0};
 
@@ -62,14 +67,26 @@ static void app_spi_master_init_config(void) {
 
   ext_config.qspi_param.wait_cycles = SPI_WAIT_CYCLES;
   errcode_t ret;
-  // ret = uapi_dma_init();
-  // if (ret != ERRCODE_SUCC) {
-  //   osal_printk("uapi_dma_init failed .\n");
-  // }
-  // ret = uapi_dma_open();
-  // if (ret != ERRCODE_SUCC) {
-  //   osal_printk("uapi_dma_init failed .\n");
-  // }
+#ifdef dma_enable
+#ifdef debug
+  osal_printk("spi%d master dma init start!\r\n", SPI_BUS_0); // TODO:debug
+#endif
+  ret = uapi_dma_init();
+  if (ret != ERRCODE_SUCC) {
+    osal_printk("uapi_dma_init failed .\n");
+  }
+#ifdef debug
+  osal_printk("spi%d master dma init end!\r\n", SPI_BUS_0);   // TODO:debug
+  osal_printk("spi%d master dma open start!\r\n", SPI_BUS_0); // TODO:debug
+#endif
+  ret = uapi_dma_open();
+  if (ret != ERRCODE_SUCC) {
+    osal_printk("uapi_dma_init failed .\n");
+  }
+#ifdef debug
+  osal_printk("spi%d master dma open end!\r\n", SPI_BUS_0); // TODO:debug
+#endif
+#endif
   ret = uapi_spi_init(SPI_BUS_0, &config, &ext_config);
   if (ret != ERRCODE_SUCC) {
     osal_printk("uapi_spi_init failed .\n");
@@ -77,9 +94,9 @@ static void app_spi_master_init_config(void) {
   } else {
     osal_printk("uapi_spi_init success .\n");
   }
-  #ifdef debug
-  osal_printk("spi%d master init end!\r\n", SPI_BUS_0);//TODO:debug
-  #endif
+#ifdef debug
+  osal_printk("spi%d master init end!\r\n", SPI_BUS_0); // TODO:debug
+#endif
 }
 
 static void *spi_master_task(const char *arg) {

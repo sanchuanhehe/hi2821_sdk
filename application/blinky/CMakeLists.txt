@@ -23,6 +23,7 @@ set(PUBLIC_DEFINES
 
 # use this when you want to add ccflags like -include xxx
 set(COMPONENT_PUBLIC_CCFLAGS
+    -O3
 )
 
 set(COMPONENT_CCFLAGS
