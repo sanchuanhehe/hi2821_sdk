@@ -1,0 +1,22 @@
+{
+    "recommendations": [
+        "ms-vscode.cpptools",
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "llvm-vs-code-extensions.vscode-clangd",
+        "twxs.cmake",
+        "adam-bender.commit-message-editor",
+        "cschlosser.doxdocgen",
+        "vinirossa.vscode-gitandgithub-pack",
+        "mhutchie.git-graph",
+        "donjayamanne.githistory",
+        "howardzuo.vscode-git-tags",
+        "github.copilot",
+        "github.copilot-chat",
+        "github.vscode-pull-request-github",
+        "github.remotehub",
+        "ms-vscode.remote-repositories",
+        "ziyasal.vscode-open-in-github",
+        "gruntfuggly.todo-tree",
+        "ms-vscode-remote.remote-containers"
+    ]
+}
