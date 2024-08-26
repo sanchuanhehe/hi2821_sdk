@@ -1,5 +1,8 @@
 # 海思 Hi2821 SDK 项目
 
+[English Version](README.md) | [中文版](README.zh.md)
+
+
 ## 概述
 
 本项目是海思 Hi2821 芯片的 SDK，旨在通过 Docker 容器进行开发和构建，使用 Visual Studio Code (VSCode) 作为集成开发环境。该项目支持在 Linux（原生或 WSL2 虚拟机中运行）环境中进行开发，并通过 `build.py` 脚本进行构建。
