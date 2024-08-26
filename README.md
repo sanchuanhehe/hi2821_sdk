@@ -1,5 +1,7 @@
 # hi2821_sdk
 
+[English Version](README.md) | [中文版](README.zh.md)
+
 ## Overview
 
 This project is structured to be developed and built within a Docker container, utilizing Visual Studio Code (VSCode) for an integrated development environment. The project is compatible with Linux (either native or within a WSL2 virtual machine) and can be built using a `build.py` script.
